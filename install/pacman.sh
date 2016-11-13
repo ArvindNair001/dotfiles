@@ -17,5 +17,5 @@ if test $(which pacman); then
 
 
 fi
-mv /etc/pacman.d/pacman.conf ~/sysconfback
-cp repo/pacman.conf /etc/pacman.d/pacman.conf
+# mv /etc/pacman.d/pacman.conf ~/sysconfback
+# cp repo/pacman.conf /etc/pacman.d/pacman.conf

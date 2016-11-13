@@ -23,5 +23,8 @@ brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 
 #upgrading packages
-# brew upgrade npm
+
+brew upgrade npm
+npm install -g grunt-cli
+
 exit 0
