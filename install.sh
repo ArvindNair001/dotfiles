@@ -27,7 +27,7 @@ if [  "$(uname)"=="Linux" ]; then
     # fi
 
     # exporting zsh path to bash for chsh failsafe
-    echo $(which zsh) > ~/bash_profile
+    echo $(which zsh) >> /etc/shells
 fi
 
 
