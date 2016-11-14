@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 #Author : Arvind Hariharan Nair
 
+source intall/backup.sh
+
 echo "installing Configurations"
 source install/link.sh
 
+#macOS
+if [ "$(uname)" == "Darwin" ]; then
+    echo -e -n "\nRunning on macOS "
+    echo "$(sw_vers -productVersion)"
+    source install/brew.sh
+    # source install/nvm.sh
+fi
 #Linux condition
-if [  "$(uname)"=="Linux" ]; then
-
+if [  "$(uname)" == "Linux" ]; then
     #developer tools
-    source /install/development.sh
-    source /install/linuxbrew.sh
+    source install/devel.sh
+    source install/linuxbrew.sh
 
     # #Arch Linux
     # if[ "$(cat /etc/issue)"=="Arch Linux" ]; then
@@ -18,7 +26,7 @@ if [  "$(uname)"=="Linux" ]; then
     # fi
 
     # exporting zsh path to bash for chsh failsafe
-    echo $(which zsh) >> /etc/shells
+    sudo bash -c echo $(which zsh) >> /etc/shells
 fi
 
 echo "Configuring ZSH as default shell"
