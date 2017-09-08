@@ -24,4 +24,19 @@ elif [ -f  /etc/debian_version ]; then
   # elif [ -f /etc/redhat-release ]; then
   #   if test ! $(which ruby); then
   #     yum
+
+elif [ -f /etc/fedora-release ]; then
+  echo "Updating the package manager"
+  sudo dnf update -y
+  echo "installing fedy"
+  sudo sh -c 'curl https://www.folkswithhats.org/installer | bash'
+  dnf install -y yumex-dnf
+  if test ! $(which ruby); then
+    echo "installing ruby"
+    sudo dnf install -y ruby
+  if test ! $(which gcc) ; then
+    echo "installing gcc and g++";
+    dnf install -y gcc gcc-c++
+  fi
+  #statements
 fi
