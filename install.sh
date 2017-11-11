@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #Author : Arvind Hariharan Nair
 
 source intall/backup.sh
@@ -17,16 +18,11 @@ fi
 if [  "$(uname)" == "Linux" ]; then
     #developer tools
     source install/devel.sh
-    source install/linuxbrew.sh
-
-    # #Arch Linux
-    # if[ "$(cat /etc/issue)"=="Arch Linux" ]; then
-    #   echo "Running on Arch Linux"
-    #   source install/pacman.sh
-    # fi
+    source install/zsh.sh
+    #source install/linuxbrew.sh
 
     # exporting zsh path to bash for chsh failsafe
-    sudo bash -c echo $(which zsh) >> /etc/shells
+    # sudo bash -c echo $(which zsh) >> /etc/shells
 fi
 
 echo "Configuring ZSH as default shell"
