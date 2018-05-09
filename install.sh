@@ -45,7 +45,7 @@ fi
 source install/common/ssh.sh
 
 echo "\nInstalling Rust"
-echo "$(curl https://sh.rustup.rs -sSf | sh -- -y)"
+echo "$(curl https://sh.rustup.rs -sSf | sh - --y)"
 
 # Installing ZSH modules
 source install/common/zsh.sh
