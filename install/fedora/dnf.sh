@@ -22,12 +22,12 @@ kernel-devel-uname-r \
 zsh
 
 # multimedia codecs
-echo -e "Installing Restricted Extras"
+echo -e "\nInstalling Restricted Extras"
 dnf -y groupinstall multimedia
 dnf -y install ffmpeg \
-gnome-mpv \
-ffmpeg-compact \
-gstreamer1-plugin-openh264
+compat-ffmpeg \
+gnome-mpv 
+#gstreamer1-plugin-openh264 
 
 
 #disabling COPR Repos
