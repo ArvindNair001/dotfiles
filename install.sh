@@ -41,29 +41,14 @@ if [  "$(uname)" == "Linux" ]; then
      sudo bash -c echo $(which zsh) >> /etc/shells
 fi
 
-# Configuring SSH
-user=$(logname)
-location="/home/$user/.ssh"
-
-echo "Generating SSH Keys"
-mkdir  -vp $location
-ssh-keygen -t rsa -b 4096
-chmod +600 .ssh
-chmod +700 .ssh/*
-
-echo "Installing Oh my zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "Configuring ZSH as default shell"
-chsh -s $(which zsh)
-
-echo "Installing POWERLEVEL9K"
-echo "$(git clone https://github.com/bhilburn/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k)"
-
-echo "installing zsh plugins"
-echo "$(git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions)"
+# configuring SSH
+source install/common/ssh.sh
 
 echo "\nInstalling Rust"
 echo "$(curl https://sh.rustup.rs -sSf | sh -- -y)"
+
+# Installing ZSH modules
+source install/common/zsh.sh
+
 
 echo "Done"
