@@ -24,7 +24,7 @@ if test $(which pacman); then
     tmux \
     zsh 
 fi
-source ../common/flatpak.sh
+source install/common/flatpak.sh
 
 # mv /etc/pacman.d/pacman.conf ~/sysconfback
 # cp repo/pacman.conf /etc/pacman.d/pacman.conf

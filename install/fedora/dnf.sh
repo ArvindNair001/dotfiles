@@ -1,7 +1,7 @@
 echo "Updating System"
 sudo dnf update -y
 
-source ./add-repo.sh
+source install/fedora/add-repo.sh
 
 echo "Installing Softwares"
 sudo dnf install -y \
@@ -34,4 +34,4 @@ gstreamer1-plugin-openh264
 sudo dnf copr -y disable user501254/Paper
 sudo dnf copr -y disable dirkdavidis/papirus-icon-theme
 
-source ./../common/flatpak.sh
+source install/common/flatpak.sh

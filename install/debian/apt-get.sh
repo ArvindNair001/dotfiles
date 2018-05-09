@@ -11,8 +11,8 @@ if test $(which apt) then
 
     echo "installing Softwares"
     sudo apt install \
+    ranger \
+    synaptic \
     virtualbox-5.2 \
-
-
     zsh
 fi
