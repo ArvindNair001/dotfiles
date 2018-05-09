@@ -4,7 +4,7 @@ sudo dnf update -y
 source install/fedora/add-repo.sh
 
 echo "Installing Softwares"
-sudo dnf install -y \
+sudo dnf install -y gnome-tweaks \
 htop \
 ranger \
 stow \
@@ -19,10 +19,11 @@ yumex-dnf \
 VirtualBox \
 akmod-VirtualBox \
 kernel-devel-uname-r \
+util-linux-user \
 zsh
 
 # multimedia codecs
-echo -e "\nInstalling Restricted Extras"
+echo -e "\nInstalling Multimedia"
 dnf -y groupinstall multimedia
 dnf -y install ffmpeg \
 compat-ffmpeg \
