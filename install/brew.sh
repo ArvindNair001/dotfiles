@@ -7,7 +7,7 @@ fi
 
 echo "\n###############################"
 echo -e "\ninstalling Homebrew packages"
-echo  "################################"
+echo  "\n################################"
 
 #CLI tools
 brew install tree
