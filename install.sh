@@ -64,6 +64,6 @@ echo "installing zsh plugins"
 echo "$(git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions)"
 
 echo "\nInstalling Rust"
-echo "$(curl https://sh.rustup.rs -sSf | sh)"
+echo "$(curl https://sh.rustup.rs -sSf | sh -- -y)"
 
 echo "Done"
