@@ -1,4 +1,5 @@
-if test $(which flatpak) then
+if test $(which flatpak); then
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak-install flathub org.nextcloud.Nextcloud \
     org.gimp.GIMP \
     org.telegram.desktop \
