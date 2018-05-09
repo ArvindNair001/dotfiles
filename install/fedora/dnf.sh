@@ -26,7 +26,7 @@ zsh
 echo -e "\nInstalling Multimedia"
 sudo dnf -y groupinstall multimedia
 sudo dnf -y install ffmpeg \
-compat-ffmpeg \
+compat-ffmpeg28 \
 gnome-mpv 
 #gstreamer1-plugin-openh264 
 
