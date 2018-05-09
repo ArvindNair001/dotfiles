@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 HOME="/home/$(logname)"
-ZCUSTOM="$HOME/.oh-my-zsh.zsh/custom"
+ZCUSTOM="$HOME/.oh-my-zsh/custom"
 echo -e "Installing Oh my zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 cp $HOME/.zshrc $HOME/.zshrc.pre_oh-my-zsh
