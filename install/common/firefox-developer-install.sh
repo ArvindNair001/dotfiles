@@ -1,7 +1,7 @@
 if [ -d /opt/firefox-developer ]; then 
     sudo rm /usr/bin/firefox-developer
     sudo rm -rvf /opt/firefox-developer
-    sudo rm /usr/shar/applications/firefox-developer.desktop
+    sudo rm /usr/share/applications/firefox-developer.desktop
     sudo rm /usr/share/icons/hicolor/128x128/apps/firefox-developer-icon.png
 fi
 CACHEDIR="/var/cache/tmp/firefox-developer"
