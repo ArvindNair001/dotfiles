@@ -24,8 +24,8 @@ zsh
 
 # multimedia codecs
 echo -e "\nInstalling Multimedia"
-dnf -y groupinstall multimedia
-dnf -y install ffmpeg \
+sudo dnf -y groupinstall multimedia
+sudo dnf -y install ffmpeg \
 compat-ffmpeg \
 gnome-mpv 
 #gstreamer1-plugin-openh264 
