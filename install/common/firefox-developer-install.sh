@@ -1,8 +1,7 @@
 if [ -d /opt/firefox-developer ]; then 
     sudo rm /usr/bin/firefox-developer
-    sudo rm -rvf /opt/firefox-developer
+    sudo rm -rf /opt/firefox-developer
     sudo rm /usr/share/applications/firefox-developer.desktop
-    sudo rm /usr/share/icons/hicolor/128x128/apps/firefox-developer-icon.png
 fi
 CACHEDIR="/var/cache/tmp/firefox-developer"
 FILE="firefox-developer.tar.bz2"
@@ -19,9 +18,8 @@ user=$(logname)
 [[ -n $user ]] && chown -R $user $DIR
 ln -sf "$DIR/firefox" "/usr/bin/firefox-developer"
 
-ICON="/opt/firefox-developer/browser/chrome/icons/default"
-cp "$ICON/default128.png" "$ICON/firefox-developer-icon.png"
-mv -f "$ICON/firefox-developer-icon.png" "/usr/share/icons/hicolor/128x128/apps"
+xdg-icon-resource install --novendor --size 128 "/opt/firefox-developer/browser/chrome/icons/default/default128.png" "firefox-developer-icon"
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor
 
 cat > /usr/local/share/applications/firefox-developer.desktop <<EOL
 [Desktop Entry]
@@ -30,7 +28,7 @@ Encoding=UTF-8
 Name=Firefox Developer Edition
 Comment=Firefox Developer Edition
 Exec=firefox-developer
-Icon=firefox-developer-icon.png
+Icon=firefox-developer-icon
 Terminal=false
 Type=Application
 StartupNotify=true
