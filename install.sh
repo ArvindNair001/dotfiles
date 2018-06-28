@@ -41,6 +41,8 @@ if [  "$(uname)" == "Linux" ]; then
      sudo bash -c echo $(which zsh) >> /etc/shells
 fi
 
+#installing vscode Extensions
+source install/common/vscode-extensions.sh
 # configuring SSH
 source install/common/ssh.sh
 
