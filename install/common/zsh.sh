@@ -2,7 +2,7 @@
 HOME="/home/$(logname)"
 ZCUSTOM="$HOME/.oh-my-zsh/custom"
 echo -e "Installing Oh my zsh"
-source ./oh-my-zsh.sh
+source install/common/oh-my-zsh.sh
 
 # git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 # cp $HOME/.zshrc $HOME/.zshrc.pre_oh-my-zsh
