@@ -52,5 +52,7 @@ echo "$(curl https://sh.rustup.rs -sSf | sh - --y)"
 # Installing ZSH modules
 source install/common/zsh.sh
 
+source install/backup.sh
+source install/link.sh
 
 echo "Done"

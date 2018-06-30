@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-DOTFILES=$HOME/.dotfiles
-DOTBACK=$HOME/dotfiles_backup
+DOTFILES=$HOME/.dotfiles/common
+DOTBACK=$HOME/backup/dotfiles
 
 echo "creating backup at $DOTBACK"
 mkdir -p -v $DOTBACK
@@ -12,18 +12,36 @@ for file in $linkables; do
     target="$HOME/$filename"
     if [ ! -L $target ]; then
         echo "backing up $filename"
-        cp $target $DOTBACK
+        mv $target $DOTBACK
     else
         echo -e "$filename does not exist at this location or is a symlink"
     fi
 done
 
-files=("$HOME/.config/nvim" "$HOME/.vim" "$HOME/.vimrc")
-for filename in "$HOME/.config/nvim" "$HOME/.vim" "$HOME/.vimrc"; do
-    if [ ! -L $filename ]; then
-        echo "backing up $filename"
-        cp -rf $filename $DOTBACK
-    else
-        echo -e "$filename does not exist at this location or is a symlink"
-    fi
+#Backing config directories
+
+files=$( find "$DOTFILES" -maxdepth 1 -type d)
+for file in ${files[@]}; do
+	dirname="$( basename $file)"
+	srcname=".$( basename $dirname)"
+	contents=$(ls $DOTFILES/$dirname)	
+	if [ ! $dirname = "Templates" ]; then	
+        for content in $contents; do 
+            if [ $dirname = "local" ];then
+                target=$HOME/$srcname/share/fonts
+                mv $target $DOTBACK/$dirname/share
+            elif [ $dirname = "vscode" ]; then
+                echo -e "\n Backing up vscode configurations"
+                target=$HOME/.vscode
+                mv $target $DOTBACK
+            else			
+                target=$HOME/$srcname/$content
+                mv $target $DOTBACK/$dirname/
+            fi
+
+        done
+	else 
+		echo -e "\nBacking up $dirname"
+		mv $HOME/$dirname $DOTBACK
+	fi
 done

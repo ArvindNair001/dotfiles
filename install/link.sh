@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES=$HOME/.dotfiles
+DOTFILES=$HOME/.dotfiles/common
 
 echo -e "\nCreating symlinks"
 echo "=============================="
@@ -32,25 +32,27 @@ for config in $DOTFILES/config/*; do
     fi
 done
 
-# create vim symlinks
-# As I have moved off of vim as my full time editor in favor of neovim,
-# I feel it doesn't make sense to leave my vimrc intact in the dotfiles repo
-# as it is not really being actively maintained. However, I would still
-# like to configure vim, so lets symlink ~/.vimrc and ~/.vim over to their
-# neovim equivalent.
+# Creating symlink for vscode 
+echo "\n\nLinking vscode"
+if [ ! -L $HOME/.vscode ]; then
+    ln -s $DOTFILES/vscode $HOME/.vscode
+else    
+    echo -e "\nError linking vscode already exists !"
+fi
 
-echo -e "\n\nCreating vim symlinks"
-echo "=============================="
-VIMFILES=( "$HOME/.vim:$DOTFILES/vim/.vim"
-        "$HOME/.vimrc:$DOTFILES/vim/.vimrc" )
+echo "\nLinking Templates"
+if [ ! -L $HOME/Templates ];then
+    ln -s $DOTFILES/Templates $HOME/Templates
+else 
+    echo -e "\nError linking vscode already exists !"
+fi
 
-for file in "${VIMFILES[@]}" ; do
-    KEY=${file%%:*}
-    VALUE=${file#*:}
-    if [ -e ${KEY} ]; then
-        echo "${KEY} already exists... skipping"
+for config in $DOTFILES/local/share/*; do
+    target=$HOME/.local/share/$( basename $config )
+    if [ -e $target ]; then
+        echo "~${target#$HOME} already exists... Skipping."
     else
-        echo "Creating symlink for $KEY"
-        ln -s ${VALUE} ${KEY}
+        echo "Creating symlink for $config"
+        ln -s $config $target
     fi
 done
