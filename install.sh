@@ -35,8 +35,10 @@ if [  "$(uname)" == "Linux" ]; then
     fi
 
     # installing firefox developer edition
-    sudo sh ./install/common/firefox-developer-install.sh
-
+    if [ ! $OS = 'arch' ]; then 
+        sudo sh ./install/common/firefox-developer-install.sh
+    fi
+    
     # exporting zsh path to bash for chsh failsafe
      sudo bash -c echo $(which zsh) >> /etc/shells
 fi
