@@ -18,7 +18,7 @@ fi
 
 #Linux condition
 if [  "$(uname)" == "Linux" ]; then
-    if [ "$(cat /etc/issue)" == "Arch Linux" ]; then
+    if [ "$(cat /etc/arch-release)" == "Arch Linux" ]||[ "$(cat /etc/arch-release)" == "Manjaro Linux" ]; then
         echo -e "Running Arch Linux"
         OS='arch'
         source install/arch/pacman.sh
