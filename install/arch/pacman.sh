@@ -29,6 +29,7 @@ if test $(which pacman); then
     npm \
     python-nautilus \
     vim \
+    stow \
     tlp \
     tlp-rdw \
     tmux \
