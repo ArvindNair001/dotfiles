@@ -58,3 +58,4 @@ source install/backup.sh
 source install/link.sh
 
 echo "Done"
+env zsh
