@@ -9,6 +9,6 @@ if test $(which flatpak); then
     org.gottcode.FocusWriter 
 
     if [ "$OS" == "arch" ]; then
-        flatpak install flathub com.visualstudio.code
+        #flatpak install flathub com.visualstudio.code
     fi
 fi

@@ -5,7 +5,11 @@ source install/fedora/add-repo.sh
 
 echo "Installing Softwares"
 sudo dnf install -y gnome-tweaks \
+code \
 htop \
+gcc-c++ \
+make \
+nodejs \
 ranger \
 stow \
 tilix \
@@ -19,6 +23,7 @@ yumex-dnf \
 VirtualBox \
 akmod-VirtualBox \
 kernel-devel-uname-r \
+@virtualization \
 util-linux-user \
 zsh
 
@@ -27,8 +32,7 @@ echo -e "\nInstalling Multimedia"
 sudo dnf -y groupinstall multimedia
 sudo dnf -y install ffmpeg \
 compat-ffmpeg28 \
-gnome-mpv 
-#gstreamer1-plugin-openh264 
+gnome-mpv  
 
 
 #disabling COPR Repos
