@@ -10,7 +10,7 @@ linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 for file in $linkables; do
     filename=".$( basename $file '.symlink' )"
     target="$HOME/$filename"
-    if [ ! -L $target ]; then
+    if [ ! -L $target ] && [ -e $target ]; then
         echo "backing up $filename"
         mv $target $DOTBACK
     else
@@ -20,7 +20,7 @@ done
 
 #Backing config directories
 
-files=$( find "$DOTFILES" -maxdepth 1 -type d)
+files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
 for file in ${files[@]}; do
 	dirname="$( basename $file)"
 	srcname=".$( basename $dirname)"
@@ -29,19 +29,26 @@ for file in ${files[@]}; do
         for content in $contents; do 
             if [ $dirname = "local" ];then
                 target=$HOME/$srcname/share/fonts
-                mv $target $DOTBACK/$dirname/share
+                if [ -e $target ]; then
+                    mv $target $DOTBACK/$dirname/share
+                fi
             elif [ $dirname = "vscode" ]; then
                 echo -e "\n Backing up vscode configurations"
                 target=$HOME/.vscode
-                mv $target $DOTBACK
+                if [ -e $target ]; then
+                    mv $target $DOTBACK
+                fi
             else			
                 target=$HOME/$srcname/$content
-                mv $target $DOTBACK/$dirname/
+                if [ -e $target ]; then
+                    mv $target $DOTBACK/$dirname/
+                fi
             fi
-
         done
 	else 
 		echo -e "\nBacking up $dirname"
-		mv $HOME/$dirname $DOTBACK
+        if [ -e $HOME/$dirname ]; then
+		    mv $HOME/$dirname $DOTBACK
+        fi
 	fi
 done
