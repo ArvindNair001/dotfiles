@@ -1,30 +1,35 @@
-if test $(which pacman); then
-    echo "updating packages"
-    sudo pacman -Sy && pacman -Syu
+#if test $(which pacman); then
+#if command -v pacman >/dev/null 2>&1; then
     
-    if test ! $(which yaourt); then
+    echo "selecting fastest Mirrors"
+    sudo pacman-mirrors -g
+
+    echo "updating packages"
+    sudo pacman -Sy && sudo pacman -Syu
+    
+    if command -v yaourt >/dev/null 2>&1; then
       sudo pacman -S --noconfirm yaourt
     fi
 
-    if test ! $(which gcc); then
+    if command -v gcc >/dev/null 2>&1; then
       sudo pacman -S --noconfirm gcc
     fi
 
-    if test ! $(which ruby); then
+    if command -v ruby >/dev/null 2>&1; then
       sudo pacman -S --noconfirm ruby
     fi
 
-    sudo pacman -S --noconfirm wget \
-    binutils \
+    sudo pacman -S --noconfirm binutils \
+    calibre \
     chromium \
     flatpak \
     firefox \
     firefox-developer-edition \
     curl \
-    git \
     gnome-software \
     gnome-mpv \
     htop \
+    jdk10-openjdk \
     nodejs \
     npm \
     python-nautilus \
@@ -32,10 +37,13 @@ if test $(which pacman); then
     stow \
     tlp \
     tlp-rdw \
+    transmission-remote-gtk \
     tmux \
     tilix \
+    wget \
+    yay \
     zsh 
-fi
+#fi
 yaourt -S --noconfirm visual-studio-code-bin
 source install/common/flatpak.sh
 

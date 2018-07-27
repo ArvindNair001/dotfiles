@@ -109,4 +109,4 @@ main() {
   echo ''
   printf "${NORMAL}"
 }
-main ()
+main

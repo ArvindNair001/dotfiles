@@ -1,8 +1,14 @@
 #!/bin/bash
 
-dnf -y install  libgcc.i686 compat-libstdc++-296.i686 compat-libstdc++-33.i686 compat-libstdc++-33.x86_64 glibc.i686 ncurses-libs.i686 zlib.i686 bzip2-libs.i686 glibc-devel.i686 libstdc++.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
+if command -v dnf >/dev/null 2>&1; then
+	dnf -y install  libgcc.i686 compat-libstdc++-296.i686 compat-libstdc++-33.i686 compat-libstdc++-33.x86_64 glibc.i686 ncurses-libs.i686 zlib.i686 bzip2-libs.i686 glibc-devel.i686 libstdc++.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
+fi
 
-CACHEDIR="/var/cache/fedy/androidstudio";
+if command -v apt >/dev/null 2>&1; then
+	pacman -S --noconfirm glibc libXrender libXrandr libX11 zlib
+fi
+
+CACHEDIR="/var/cache/tmp/androidstudio";
 
 mkdir -p "$CACHEDIR"
 cd "$CACHEDIR"

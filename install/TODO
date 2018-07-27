@@ -1,1 +1,5 @@
 Method to stop prevent adding repo if exists (in install/fedora/add-repo)
+Add support for KDE (Using $XDG_SESSION_DESKTOP)
+    Use stow -d to set path and use two separate config folders for gnome && KDE
+Add support of Antergos (use awk to separate the arguments)
+    Separate Arch, Manjaro and Antergos installations if possible

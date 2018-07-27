@@ -45,17 +45,22 @@ fi
 
 #installing vscode Extensions
 source install/common/vscode-extensions.sh
-# configuring SSH
-source install/common/ssh.sh
 
-echo "\nInstalling Rust"
-echo "$(curl https://sh.rustup.rs -sSf | sh -s -- --y)"
+# configuring SSH
+if [ -d $HOME/.ssh ]; then
+    source install/common/ssh.sh
+fi
+
+if ! command -v rustup >/dev/null 2>&1; then
+    echo "\nInstalling Rust"
+    echo "$(curl https://sh.rustup.rs -sSf | sh -s -- --y)"
+fi
 
 # Installing ZSH modules
 source install/common/zsh.sh
 
 source install/backup.sh
-source install/link.sh
+source install/stow.sh
 
 echo "Done"
 env zsh
