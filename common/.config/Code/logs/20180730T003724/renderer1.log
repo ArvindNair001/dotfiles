@@ -1,0 +1,19 @@
+[2018-07-30 00:37:26.894] [renderer1] [info] no standard startup: not just one text editor
+[2018-07-30 00:37:42.332] [renderer1] [error] Error: Inotify limit reached (ENOSPC)
+[2018-07-30 00:38:48.228] [renderer1] [info] no standard startup: not a new window
+[2018-07-30 00:38:50.289] [renderer1] [error] Error: Inotify limit reached (ENOSPC)
+[2018-07-30 00:39:01.498] [renderer1] [info] no standard startup: not a new window
+[2018-07-30 00:39:03.545] [renderer1] [error] Error: Inotify limit reached (ENOSPC)
+[2018-07-30 00:39:37.036] [renderer1] [info] No grammar found for scope source.applescript
+[2018-07-30 00:39:37.067] [renderer1] [info] No grammar found for scope text.html.textile
+[2018-07-30 00:39:37.106] [renderer1] [info] No grammar found for scope source.c++
+[2018-07-30 00:39:37.138] [renderer1] [info] No grammar found for scope source.js.jquery
+[2018-07-30 00:39:37.160] [renderer1] [info] No grammar found for scope source.smarty
+[2018-07-30 00:39:37.294] [renderer1] [info] No grammar found for scope source.dosbatch
+[2018-07-30 00:39:37.498] [renderer1] [info] No grammar found for scope source.scala
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope source.dart
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope text.html.javadoc
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope source.postscript
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope source.sass
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope source.less
+[2018-07-30 00:39:37.556] [renderer1] [info] No grammar found for scope source.stylus

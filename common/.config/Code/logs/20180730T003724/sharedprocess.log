@@ -1,0 +1,115 @@
+[2018-07-30 00:37:28.321] [sharedprocess] [info] main {"machineId":"f206b5f3c8a646b154c22b02f0b0b16c73ab30360bca11d0e9b7d0b30788429f"}
+[2018-07-30 00:37:28.383] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:28.396] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:28.397] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:28.433] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:28.434] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:29.778] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:31.093] [sharedprocess] [info] Installing extension: code-settings-sync
+[2018-07-30 00:37:31.093] [sharedprocess] [info] Installing extension: project-manager
+[2018-07-30 00:37:31.094] [sharedprocess] [info] Installing extension: Material-theme
+[2018-07-30 00:37:31.106] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:31.109] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:31.110] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:32.236] [sharedprocess] [info] Downloaded extension: Material-theme
+[2018-07-30 00:37:32.261] [sharedprocess] [info] Extracted extension to /home/arvindnair96/.vscode/extensions/.zhuangtongfa.material-theme-2.15.1: zhuangtongfa.material-theme-2.15.1
+[2018-07-30 00:37:32.261] [sharedprocess] [info] Renamed to /home/arvindnair96/.vscode/extensions/zhuangtongfa.material-theme-2.15.1
+[2018-07-30 00:37:32.261] [sharedprocess] [info] Installation completed. zhuangtongfa.material-theme-2.15.1
+[2018-07-30 00:37:32.338] [sharedprocess] [info] Extensions installed successfully: zhuangtongfa.material-theme
+[2018-07-30 00:37:32.452] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:32.466] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:33.756] [sharedprocess] [info] Downloaded extension: code-settings-sync
+[2018-07-30 00:37:34.790] [sharedprocess] [info] Extracted extension to /home/arvindnair96/.vscode/extensions/.shan.code-settings-sync-3.0.0: shan.code-settings-sync-3.0.0
+[2018-07-30 00:37:34.791] [sharedprocess] [info] Renamed to /home/arvindnair96/.vscode/extensions/shan.code-settings-sync-3.0.0
+[2018-07-30 00:37:34.791] [sharedprocess] [info] Installation completed. shan.code-settings-sync-3.0.0
+[2018-07-30 00:37:34.960] [sharedprocess] [info] Extensions installed successfully: shan.code-settings-sync
+[2018-07-30 00:37:35.084] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:35.112] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:37.269] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:37.276] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:37.290] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:38.368] [sharedprocess] [info] Downloaded extension: project-manager
+[2018-07-30 00:37:38.645] [sharedprocess] [info] Installing extension: project-manager
+[2018-07-30 00:37:38.652] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:40.195] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:41.144] [sharedprocess] [info] Extracted extension to /home/arvindnair96/.vscode/extensions/.alefragnani.project-manager-8.0.0: alefragnani.project-manager-8.0.0
+[2018-07-30 00:37:41.144] [sharedprocess] [info] Renamed to /home/arvindnair96/.vscode/extensions/alefragnani.project-manager-8.0.0
+[2018-07-30 00:37:41.144] [sharedprocess] [info] Installation completed. alefragnani.project-manager-8.0.0
+[2018-07-30 00:37:41.214] [sharedprocess] [info] Extensions installed successfully: alefragnani.project-manager
+[2018-07-30 00:37:41.216] [sharedprocess] [info] Extensions installed successfully: alefragnani.project-manager
+[2018-07-30 00:37:41.355] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:41.358] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:37:41.390] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:37:41.392] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:08.328] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-07-30 00:38:32.766] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:32.769] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:32.781] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:32.805] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:32.838] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:32.841] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:32.847] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:34.346] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:34.352] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:34.353] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:34.410] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:34.413] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:34.418] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:36.358] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:36.362] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:36.364] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:36.393] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:36.395] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:36.396] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:38.307] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:38.309] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:38.309] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:38.345] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:38.348] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:38.353] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:44.986] [sharedprocess] [info] Installing extension: theme-cobalt2
+[2018-07-30 00:38:44.990] [sharedprocess] [info] Scanned user extensions: 11
+[2018-07-30 00:38:46.118] [sharedprocess] [info] Downloaded extension: theme-cobalt2
+[2018-07-30 00:38:46.160] [sharedprocess] [info] Extracted extension to /home/arvindnair96/.vscode/extensions/.wesbos.theme-cobalt2-2.1.6: wesbos.theme-cobalt2-2.1.6
+[2018-07-30 00:38:46.160] [sharedprocess] [info] Renamed to /home/arvindnair96/.vscode/extensions/wesbos.theme-cobalt2-2.1.6
+[2018-07-30 00:38:46.160] [sharedprocess] [info] Installation completed. wesbos.theme-cobalt2-2.1.6
+[2018-07-30 00:38:46.202] [sharedprocess] [info] Extensions installed successfully: wesbos.theme-cobalt2
+[2018-07-30 00:38:46.351] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:46.370] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:48.155] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.157] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.161] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.163] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.165] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.167] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:48.206] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:48.208] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:48.210] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:48.215] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:51.285] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:53.165] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:53.168] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:53.170] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:53.208] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:53.210] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:53.214] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:38:57.328] [sharedprocess] [info] Installing extension: material-icon-theme
+[2018-07-30 00:38:57.344] [sharedprocess] [info] Scanned user extensions: 12
+[2018-07-30 00:38:58.447] [sharedprocess] [info] Downloaded extension: material-icon-theme
+[2018-07-30 00:38:58.869] [sharedprocess] [info] Extracted extension to /home/arvindnair96/.vscode/extensions/.pkief.material-icon-theme-3.5.2: pkief.material-icon-theme-3.5.2
+[2018-07-30 00:38:58.869] [sharedprocess] [info] Renamed to /home/arvindnair96/.vscode/extensions/pkief.material-icon-theme-3.5.2
+[2018-07-30 00:38:58.869] [sharedprocess] [info] Installation completed. pkief.material-icon-theme-3.5.2
+[2018-07-30 00:38:58.912] [sharedprocess] [info] Extensions installed successfully: pkief.material-icon-theme
+[2018-07-30 00:38:59.074] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:38:59.096] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:39:01.414] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.421] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.422] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.423] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.429] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.432] [sharedprocess] [info] Scanned user extensions: 13
+[2018-07-30 00:39:01.495] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:39:01.498] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:39:01.500] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:39:01.504] [sharedprocess] [info] Scanned system extensions: 70
+[2018-07-30 00:39:04.565] [sharedprocess] [info] Scanned user extensions: 13

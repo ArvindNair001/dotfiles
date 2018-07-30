@@ -2,7 +2,7 @@
     "window.zoomLevel": 1,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "extensions.ignoreRecommendations": false,
-    "workbench.colorTheme": "One Dark Pro Vivid",
+    "workbench.colorTheme": "Cobalt2",
     "workbench.startupEditor": "newUntitledFile",
     "sync.gist": "414e9b6f3a6494bd65e5b5fccab6f38e",
     "sync.lastUpload": "",
@@ -19,4 +19,5 @@
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
     "editor.fontSize": 16,
+    "workbench.iconTheme": "material-icon-theme",
 }

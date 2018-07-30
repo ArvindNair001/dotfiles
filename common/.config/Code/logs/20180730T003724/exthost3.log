@@ -1,0 +1,22 @@
+[2018-07-30 00:37:37.670] [exthost3] [info] extension host started
+[2018-07-30 00:37:37.692] [exthost3] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.692] [exthost3] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/emmet/out/extension
+[2018-07-30 00:37:37.749] [exthost3] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.749] [exthost3] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/git/out/main
+[2018-07-30 00:37:37.913] [exthost3] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.913] [exthost3] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/merge-conflict/out/extension
+[2018-07-30 00:37:37.923] [exthost3] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.923] [exthost3] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/search-rg/out/extension
+[2018-07-30 00:37:37.929] [exthost3] [info] ExtensionService#_doActivateExtension alefragnani.project-manager {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.929] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/alefragnani.project-manager-0.25.2/out/src/extension
+[2018-07-30 00:37:37.944] [exthost3] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.944] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/christian-kohler.path-intellisense-1.4.2/out/src/extension
+[2018-07-30 00:37:37.953] [exthost3] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.953] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/formulahendry.auto-close-tag-0.5.6/out/src/extension
+[2018-07-30 00:37:37.954] [exthost3] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.954] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/formulahendry.auto-rename-tag-0.0.15/out/src/extension
+[2018-07-30 00:37:37.957] [exthost3] [info] ExtensionService#_doActivateExtension naumovs.color-highlight {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.957] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/naumovs.color-highlight-2.3.0/dist/extension
+[2018-07-30 00:37:37.992] [exthost3] [info] ExtensionService#_doActivateExtension Shan.code-settings-sync {"startup":true,"activationEvent":"*"}
+[2018-07-30 00:37:37.992] [exthost3] [info] ExtensionService#loadCommonJSModule /home/arvindnair96/.vscode/extensions/shan.code-settings-sync-3.0.0/out/src/extension
+[2018-07-30 00:37:38.238] [exthost3] [info] eager extensions activated
