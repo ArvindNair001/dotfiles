@@ -5,6 +5,7 @@ DOTBACK=$HOME/backup/dotfiles
 echo "creating backup at $DOTBACK"
 mkdir -p -v $DOTBACK
 
+# Moving config files
 #linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 linkables=$( find -H "$DOTFILES" -maxdepth 1 -mindepth 1 -type f )
 
@@ -19,34 +20,58 @@ for file in $linkables; do
     fi
 done
 
-#Backing config directories
+# Moving config directories
 files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
 for file in ${files[@]}; do
-	dirname="$( basename $file)"	
+	dirname="$( basename $file)"
 	if [ ! $dirname = ".vscode" ]; then
-        #contents=$(ls $DOTFILES/$dirname)
-        contents=$(find "$DOTFILES" -maxdepth 3 -mindepth 1)	
+        contents=$(find -H $DOTFILES/$dirname -maxdepth 2 -mindepth 1 | sed 's/.dotfiles\/common\///')	
+        mkdir -p ${DOTBACK}/$dirname
         for content in $contents; do 
-            if [ $dirname = ".local" ];then
-                dirname=
-                target=$HOME/$dirname/$content
-                if [ -e $target ]; then
-                    mv $target $DOTBACK/$dirname/share
-                fi
-            else			
-                target=$HOME/$dirname/$content
-                if [ -e $target ]; then
-                    mv $target $DOTBACK/$dirname/
-                fi
+            target=$(echo "$content" |sed "s+${HOME}/+${DOTBACK}/+")
+            if [ -d $content ]&&[ ! -e $target ]; then 
+                mkdir -p $target
+            fi
+            target=$( dirname $target )
+            if [ -e $content ] && [ ! "$(basename $content)" == "share" ]; then
+                mv $content $target
             fi
         done
 	else 
-		echo -e "\nBacking up $dirname"
+        target=${DOTBACK}
         if [ -e $HOME/$dirname ]; then
-		   mv $HOME/$dirname $DOTBACK
+           mv ${HOME}/$dirname $target
         fi
 	fi
 done
+
+# files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
+# for file in ${files[@]}; do
+# 	dirname="$( basename $file)"	
+# 	if [ ! $dirname = ".vscode" ]; then
+#         #contents=$(ls $DOTFILES/$dirname)
+#         contents=$(find "$DOTFILES" -maxdepth 3 -mindepth 1)	
+#         for content in $contents; do 
+#             if [ $dirname = ".local" ];then
+#                 dirname=
+#                 target=$HOME/$dirname/$content
+#                 if [ -e $target ]; then
+#                     mv $target $DOTBACK/$dirname/share
+#                 fi
+#             else			
+#                 target=$HOME/$dirname/$content
+#                 if [ -e $target ]; then
+#                     mv $target $DOTBACK/$dirname/
+#                 fi
+#             fi
+#         done
+# 	else 
+# 		echo -e "\nBacking up $dirname"
+#         if [ -e $HOME/$dirname ]; then
+# 		   mv $HOME/$dirname $DOTBACK
+#         fi
+# 	fi
+# done
 
 #files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
 #for file in ${files[@]}; do
@@ -81,28 +106,28 @@ done
 #	fi
 #done
 
-files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
-for file in ${files[@]}; do
-	dirname="$( basename $file)"	
-	if [ ! $dirname = ".vscode" ]; then
-        contents=$(ls $DOTFILES/$dirname)	
-        for content in $contents; do 
-            if [ $dirname = ".local" ];then
-                target=$HOME/$srcname/share/fonts
-                if [ -e $target ]; then
-                    mv $target $DOTBACK/$dirname/share
-                fi
-            else			
-                target=$HOME/$dirname/$content
-                if [ -e $target ]; then
-                    mv $target $DOTBACK/$dirname/
-                fi
-            fi
-        done
-	else 
-		echo -e "\nBacking up $dirname"
-        if [ -e $HOME/$dirname ]; then
-		   mv $HOME/$dirname $DOTBACK
-        fi
-	fi
-done
+# files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
+# for file in ${files[@]}; do
+# 	dirname="$( basename $file)"	
+# 	if [ ! $dirname = ".vscode" ]; then
+#         contents=$(ls $DOTFILES/$dirname)	
+#         for content in $contents; do 
+#             if [ $dirname = ".local" ];then
+#                 target=$HOME/$srcname/share/fonts
+#                 if [ -e $target ]; then
+#                     mv $target $DOTBACK/$dirname/share
+#                 fi
+#             else			
+#                 target=$HOME/$dirname/$content
+#                 if [ -e $target ]; then
+#                     mv $target $DOTBACK/$dirname/
+#                 fi
+#             fi
+#         done
+# 	else 
+# 		echo -e "\nBacking up $dirname"
+#         if [ -e $HOME/$dirname ]; then
+# 		   mv $HOME/$dirname $DOTBACK
+#         fi
+# 	fi
+# done
