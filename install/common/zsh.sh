@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-HOME="/home/$(logname)"
 ZCUSTOM="$HOME/.oh-my-zsh/custom"
 echo -e "Installing Oh my zsh"
 source install/common/oh-my-zsh.sh
