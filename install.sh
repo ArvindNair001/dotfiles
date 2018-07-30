@@ -47,13 +47,13 @@ fi
 source install/common/vscode-extensions.sh
 
 # configuring SSH
-if [ -d $HOME/.ssh ]; then
+if [ ! -d $HOME/.ssh ]; then
     source install/common/ssh.sh
 fi
 
 if ! command -v rustup >/dev/null 2>&1; then
     echo "\nInstalling Rust"
-    echo "$(curl https://sh.rustup.rs -sSf | sh -s -- --y)"
+    echo "$(curl https://sh.rustup.rs -sSf | sh -s -- -y)"
 fi
 
 # Installing ZSH modules
