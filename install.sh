@@ -47,7 +47,7 @@ fi
 source install/common/vscode-extensions.sh
 
 # configuring SSH
-if [ ! -d $HOME/.ssh ]; then
+if [ ! -e $HOME/.ssh/id_rsa ]; then
     source install/common/ssh.sh
 fi
 
