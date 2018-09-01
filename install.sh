@@ -2,8 +2,6 @@
 
 # Author : Arvind Hariharan Nair
 
-# source intall/backup.sh
-
 # echo "installing Configurations"
 # source install/link.sh
 
@@ -18,10 +16,15 @@ fi
 
 #Linux condition
 if [  "$(uname)" == "Linux" ]; then
-    if [ "$(cat /etc/arch-release)" == "Arch Linux" ]||[ "$(cat /etc/arch-release)" == "Manjaro Linux" ]; then
+    if [ "$(cat /etc/arch-release)" == "Arch Linux" ]; then
         echo -e "Running Arch Linux"
-        OS='arch'
+        OS='Arch'
         source install/arch/pacman.sh
+
+    elif [ "$(cat /etc/arch-release)" == "Manjaro Linux" ]; then
+        echo -e "Running Manjaro Linux"
+        OS='Manjaro'
+        source intall/arch/pacman.sh 
 
     elif [ -f  /etc/debian_version ]; then
         echo -e "Running Debain or Debian based distro"
@@ -35,7 +38,7 @@ if [  "$(uname)" == "Linux" ]; then
     fi
 
     # installing firefox developer edition
-    if [ ! $OS = 'arch' ]; then 
+    if [ ! $OS = 'Arch' ]&&[ ! $OS = 'Manjaro' ]; then 
         sudo sh ./install/common/firefox-developer-install.sh
     fi
     
