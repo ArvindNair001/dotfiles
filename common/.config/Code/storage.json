@@ -261,11 +261,6 @@
             "label": "Ctrl+K Z",
             "isNative": false
         },
-        "workbench.action.toggleEditorGroupLayout": {
-            "id": "workbench.action.toggleEditorGroupLayout",
-            "label": "Shift+Alt+0",
-            "isNative": true
-        },
         "workbench.action.toggleSidebarVisibility": {
             "id": "workbench.action.toggleSidebarVisibility",
             "label": "Ctrl+B",
@@ -274,11 +269,6 @@
         "workbench.action.togglePanel": {
             "id": "workbench.action.togglePanel",
             "label": "Ctrl+J",
-            "isNative": true
-        },
-        "editor.action.toggleWordWrap": {
-            "id": "editor.action.toggleWordWrap",
-            "label": "Alt+Z",
             "isNative": true
         },
         "workbench.action.zoomIn": {
@@ -295,6 +285,16 @@
             "id": "workbench.action.zoomReset",
             "label": "Ctrl+NumPad0",
             "isNative": false
+        },
+        "workbench.action.toggleEditorGroupLayout": {
+            "id": "workbench.action.toggleEditorGroupLayout",
+            "label": "Shift+Alt+0",
+            "isNative": true
+        },
+        "editor.action.toggleWordWrap": {
+            "id": "editor.action.toggleWordWrap",
+            "label": "Alt+Z",
+            "isNative": true
         },
         "workbench.action.navigateBack": {
             "id": "workbench.action.navigateBack",
@@ -457,22 +457,50 @@
             "isNative": true
         }
     },
-    "theme": "vs-dark wesbos-theme-cobalt2-theme-cobalt2-json",
-    "themeBackground": "#193549",
+    "theme": "vs-dark zhuangtongfa-Material-theme-themes-OneDark-Pro-vivid-json",
+    "themeBackground": "#282c34",
     "pickerWorkingDir": "/home/arvindnair96",
     "openedPathsList": {
-        "workspaces": [
-            "/home/arvindnair96/.dotfiles"
+        "workspaces2": [
+            "file:///home/arvindnair96/.dotfiles",
+            "file:///home/arvindnair96/Documents/Learning/Courses/Advanced%20CSS/Natours",
+            "file:///home/arvindnair96/Documents/Learning/Courses/angular_GS/APM",
+            "file:///home/arvindnair96/Documents/Learning/Courses/angular_CG/basics-assignment-1-start/basics-assignment-1-start",
+            "file:///home/arvindnair96/Documents/Learning/Courses/angular_CG/basics-assignment-1-start",
+            "file:///home/arvindnair96/Documents/Dump/Angular/my-app",
+            "file:///home/arvindnair96/Documents/Dump/Demo",
+            "file:///home/arvindnair96/Documents/Learning/Courses/Advanced%20CSS/Natours/advanced-css-course",
+            "file:///home/arvindnair96/Documents/Dump/Sass",
+            "file:///home/arvindnair96/Documents/Dump",
+            "file:///home/arvindnair96/Documents/Dump/test-app",
+            "file:///home/arvindnair96/Documents/Dump/Java",
+            "file:///home/arvindnair96/Documents/Dump/BMPHP",
+            "file:///home/arvindnair96/Documents/Dump/ngtest",
+            "file:///home/arvindnair96/Documents/College/Labs/DSP",
+            "file:///home/arvindnair96/Documents/College/Labs/CSS"
         ],
         "files": [
+            "~/Documents/Learning/Courses/Advanced CSS/advanced-css-course/Natours/after-S05/index.html",
+            "/home/arvindnair96/.dotfiles/common/.zshrc",
+            "/home/arvindnair96/.zsh",
+            "/home/arvindnair96/Documents/Dump/Demo/Demo",
+            "/home/arvindnair96/Documents/Dump/CPP/Bmish.java",
+            "/home/arvindnair96/Documents/Dump/CPP/bm.cpp",
+            "/home/arvindnair96/Documents/Dump/linear_arvind.c",
             "/home/arvindnair96/Documents/Dump/AudioStreamPlay.java"
         ]
     },
     "windowsState": {
         "openedWindows": [],
         "lastActiveWindow": {
-            "folderPath": "/home/arvindnair96/.dotfiles",
-            "backupPath": "/home/arvindnair96/.config/Code/Backups/e2d72ab37934b7e0ddfe60cac477410d",
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/home/arvindnair96/Documents/Learning/Courses/Advanced CSS/Natours",
+                "external": "file:///home/arvindnair96/Documents/Learning/Courses/Advanced%20CSS/Natours",
+                "path": "/home/arvindnair96/Documents/Learning/Courses/Advanced CSS/Natours",
+                "scheme": "file"
+            },
+            "backupPath": "/home/arvindnair96/.config/Code/Backups/d71529aa22ea7e2c5b234e949244685b",
             "uiState": {
                 "mode": 0,
                 "x": 55,

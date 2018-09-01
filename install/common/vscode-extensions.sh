@@ -1,8 +1,7 @@
-code --install-extension PKief.material-icon-theme
 code --install-extension alefragnani.project-manager
 code --install-extension arcticicestudio.nord-visual-studio-code
 code --install-extension christian-kohler.path-intellisense
-code --install-extension esbenp.prettier-vscode
+code --install-extension felixfbecker.php-intellisense
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-complete-tag
 code --install-extension formulahendry.auto-rename-tag
@@ -10,5 +9,8 @@ code --install-extension ms-vscode.cpptools
 code --install-extension naumovs.color-highlight
 code --install-extension naumovs.theme-oceanicnext
 code --install-extension onecentlin.laravel-blade
+code --install-extension PKief.material-icon-theme
+code --install-extension robertohuertasm.vscode-icons
+code --install-extension robinbentley.sass-indented
 code --install-extension wesbos.theme-cobalt2
 code --install-extension zhuangtongfa.Material-theme

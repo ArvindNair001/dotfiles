@@ -9,11 +9,10 @@ mkdir -vp $HOME/Documents/Projects
 mkdir -vp $HOME/Documents/Learning/Courses
 mkdir -vp $HOME/Documents/Learning/Self
 
-#timestamp=$(date +"%Y%m%d%H%M")  
-# Creating backups
-#BACKUP_DIR="$HOME/backup/dotfiles-$timestamp"
-#mkdir -vp $BACKUP_DIR
-#cp -rfp "$HOME/.*" $BACKUP_DIR
-
 # Creating Symlinks
-stow -vt $HOME common 
+if [ $(echo $XDG_SESSION_DESKTOP) == 'gnome' ]; then
+    stow -vt $HOME common 
+else 
+    #KDE
+    stow -vt $HOME --ignore=.config/nautilus common 
+fi

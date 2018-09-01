@@ -1,4 +1,8 @@
 common/.config/Code/Cache
+common/.config/Code/CachedData
 common/.config/Code/CachedExtensions
 common/.config/Code/GPUCache
+common/.config/Code/logs
+common/.config/Code/workspaceStorage
+common/.vscode
 common/.local/share/fonts/.uuid
