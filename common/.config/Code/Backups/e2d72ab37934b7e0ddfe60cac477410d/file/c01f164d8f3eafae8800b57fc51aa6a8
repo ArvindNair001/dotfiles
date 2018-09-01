@@ -1,3 +1,4 @@
+file:///home/arvindnair96/.dotfiles/install/stow.sh
 mkdir -vp $HOME/.npm-global
 # Documents
 mkdir -vp $HOME/Documents/Application\ Data
@@ -14,5 +15,5 @@ if [ $(echo $XDG_SESSION_DESKTOP) == 'gnome' ]; then
     stow -vt $HOME common 
 else 
     #KDE
-    stow -vt $HOME --ignore=.config/nautilus common 
+    stow -vt --ignore=.config/nautilus $HOME  common 
 fi
