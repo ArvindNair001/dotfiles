@@ -1,5 +1,5 @@
-#if test $(which pacman); then
-#if command -v pacman >/dev/null 2>&1; then
+if test $(which pacman); then
+if command -v pacman >/dev/null 2>&1; then
     
     echo "selecting fastest Mirrors"
     sudo pacman-mirrors -g
@@ -7,15 +7,15 @@
     echo "updating packages"
     sudo pacman -Sy && sudo pacman -Syu
     
-    if command -v yaourt >/dev/null 2>&1; then
-      sudo pacman -S --noconfirm yaourt
+    if ! command -v yay >/dev/null 2>&1; then
+      sudo pacman -S --noconfirm yay
     fi
 
-    if command -v gcc >/dev/null 2>&1; then
+    if ! command -v gcc >/dev/null 2>&1; then
       sudo pacman -S --noconfirm gcc
     fi
 
-    if command -v ruby >/dev/null 2>&1; then
+    if ! command -v ruby >/dev/null 2>&1; then
       sudo pacman -S --noconfirm ruby
     fi
 
@@ -41,10 +41,18 @@
     tmux \
     tilix \
     wget \
-    yay \
     zsh 
 #fi
-yaourt -S --noconfirm visual-studio-code-bin
+
+if [ $OS == 'Manjaro']; then
+    # remove unnecessary packages
+    ## ms-office-online
+    ## Open Suse imageWriter
+    ## Empathy
+    ## mpv media player
+    
+fi
+yay -S --noconfirm --aur visual-studio-code-bin
 source install/common/flatpak.sh
 
 # mv /etc/pacman.d/pacman.conf ~/sysconfback
