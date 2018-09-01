@@ -1,8 +1,8 @@
 if test $(which flatpak); then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y flathub org.nextcloud.Nextcloud \
+    net.ankiweb.Anki \
     com.axosoft.GitKraken \
-    org.gimp.GIMP \
     org.telegram.desktop \
     com.github.fabiocolacio.marker \
     io.github.mmstick.FontFinder \

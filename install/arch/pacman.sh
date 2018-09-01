@@ -23,13 +23,13 @@ if command -v pacman >/dev/null 2>&1; then
     calibre \
     chromium \
     flatpak \
-    firefox \
     firefox-developer-edition \
     curl \
     gnome-software \
     gnome-mpv \
     htop \
     jdk10-openjdk \
+    openjdk10-doc \
     nodejs \
     npm \
     python-nautilus \
@@ -37,7 +37,6 @@ if command -v pacman >/dev/null 2>&1; then
     stow \
     tlp \
     tlp-rdw \
-    transmission-remote-gtk \
     tmux \
     tilix \
     wget \
@@ -46,10 +45,17 @@ if command -v pacman >/dev/null 2>&1; then
 
 if [ $OS == 'Manjaro']; then
     # remove unnecessary packages
-    ## ms-office-online
-    ## Open Suse imageWriter
-    ## Empathy
-    ## mpv media player
+    sudo pacman -Rn ms-office-online \
+    imagewrtier \
+    empathy \
+    mpv
+fi
+
+if [ $OS == 'Arch' ]; then
+    sudo pacman -S firefox \
+    libreoffice-fresh\
+    gufw\
+
     
 fi
 yay -S --noconfirm --aur visual-studio-code-bin
