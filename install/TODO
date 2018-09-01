@@ -1,5 +1,11 @@
-Method to stop prevent adding repo if exists (in install/fedora/add-repo)
+Method to prevent adding repo if exists (in install/fedora/add-repo)
 Add support for KDE (Using $XDG_SESSION_DESKTOP)
-    Use stow -d to set path and use two separate config folders for gnome && KDE
+    Use stow -d to set path and use two separate config folders for gnome && KDE XX
+    use stow ignore for ignoring files irrelevant to corresponding distros
 Add support of Antergos (use awk to separate the arguments)
     Separate Arch, Manjaro and Antergos installations if possible
+Add Git config (name,username,editor,difftool(vimdiff))
+backup & restore Dconf files (dconf dump and load)
+Fix firefox-developer install script
+Remove .vscode from common 
+Remove cache files from .config
