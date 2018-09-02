@@ -1,8 +1,10 @@
 if test $(which pacman); then
 if command -v pacman >/dev/null 2>&1; then
     
-    echo "selecting fastest Mirrors"
-    sudo pacman-mirrors -g
+    if [ $OS == 'Manjaro' ]
+        echo "selecting fastest Mirrors"
+        sudo pacman-mirrors -g
+    fi
 
     echo "updating packages"
     sudo pacman -Sy && sudo pacman -Syu
@@ -53,8 +55,13 @@ fi
 
 if [ $OS == 'Arch' ]; then
     sudo pacman -S firefox \
-    libreoffice-fresh\
-    gufw\
+    libreoffice-fresh \
+    gufw \
+    p7zip \
+    unrar \ 
+    rsync
+    
+    yay -S --noconfirm --aur pamac-aur
 
     
 fi
