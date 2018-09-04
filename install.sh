@@ -6,8 +6,9 @@
 # source install/link.sh
 
 OS=''
+DE=$XDG_SESSION_DESKTOP
 #macOS
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     echo -e -n "\nRunning on macOS "
     echo "$(sw_vers -productVersion)"
     OS='mac'
@@ -15,13 +16,13 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 #Linux condition
-if [  "$(uname)" == "Linux" ]; then
-    if [ "$(cat /etc/arch-release)" == "Arch Linux" ]; then
+if [  "$(uname)" = "Linux" ]; then
+    if [ "$(cat /etc/arch-release)" = "Arch Linux" ]; then
         echo -e "Running Arch Linux"
         OS='Arch'
         source install/arch/pacman.sh
 
-    elif [ "$(cat /etc/arch-release)" == "Manjaro Linux" ]; then
+    elif [ "$(cat /etc/arch-release)" = "Manjaro Linux" ]; then
         echo -e "Running Manjaro Linux"
         OS='Manjaro'
         source intall/arch/pacman.sh 
@@ -37,18 +38,22 @@ if [  "$(uname)" == "Linux" ]; then
         source install/fedora/dnf.sh
     fi
 
-    # installing firefox developer edition
     if [ ! $OS = 'Arch' ]&&[ ! $OS = 'Manjaro' ]; then 
         sudo sh ./install/common/firefox-developer-install.sh
     fi
     
     # exporting zsh path to bash for chsh failsafe
-     sudo bash -c echo $(which zsh) >> /etc/shells
+    # sudo bash -c echo $(which zsh) >> /etc/shells
 fi
 
 #installing vscode Extensions
-source install/common/vscode-extensions.sh
-
+echo -e "Installing vscode Extensions"
+if command -v code >/dev/null 2>&1; then
+    source install/common/vscode-extensions.sh
+else 
+    echo -e "vscode not installed, Skipping...!"
+fi
+    
 # configuring SSH
 if [ ! -e $HOME/.ssh/id_rsa ]; then
     source install/common/ssh.sh
