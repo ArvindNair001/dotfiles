@@ -7,5 +7,10 @@ Add support of Antergos (use awk to separate the arguments)
 Add Git config (name,username,editor,difftool(vimdiff))
 backup & restore Dconf files (dconf dump and load)
 Fix firefox-developer install script
-Remove .vscode from common 
-Remove cache files from .config
+call flatpak from main install script
+----fix yay installation (cannot be installed through pacman)----
+Using rsync to backup (delete source then after stow using rsync to restore missing files)
+divide .zshrc into subfiles (alias,powerlevelconf,etc.)
+Simplify pacman script (remove $OS arch as --needed wont reinstall)
+separate gnome specific apps ($XDG variable)
+cache sudo password using [read] or remove sudo from all the commands and use [sudo -u username] for regular stuff
