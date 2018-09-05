@@ -6,19 +6,6 @@ fi
 echo "updating packages"
 sudo pacman -Sy && sudo pacman -Syu
 
-if ! command -v yay >/dev/null 2>&1; then
-    git clone https://aur.archlinux.org/yay.git $TEMP_DIR && cd $TEMP_DIR/yay
-    makepkg -si --noconfirm --needed
-fi
-
-if ! command -v gcc >/dev/null 2>&1; then
-    sudo pacman -S --noconfirm --needed gcc
-fi
-
-if ! command -v ruby >/dev/null 2>&1; then
-    sudo pacman -S --noconfirm --needed ruby
-fi
-
 sudo pacman -S --noconfirm --needed binutils \
 calibre \
 chromium \
@@ -38,7 +25,7 @@ npm \
 python-nautilus \
 openssh \
 p7zip \
-unrar \ 
+unrar \
 rsync \
 steam \
 steam-native-runtime \
@@ -51,12 +38,25 @@ tilix \
 wget \
 zsh 
 
-if [ $OS = 'Manjaro']; then
+if ! command -v gcc >/dev/null 2>&1; then
+    sudo pacman -S --noconfirm --needed gcc
+fi
+
+if ! command -v ruby >/dev/null 2>&1; then
+    sudo pacman -S --noconfirm --needed ruby
+fi
+
+if [ $OS = 'Manjaro' ]; then
     # remove unnecessary packages
     sudo pacman -Rns ms-office-online \
     imagewrtier \
     empathy \
     mpv
+fi
+
+if ! command -v yay >/dev/null 2>&1; then
+    git clone https://aur.archlinux.org/yay.git $TEMP_DIR/yay && cd $TEMP_DIR/yay
+    makepkg -si --noconfirm --needed
 fi
 
 if command -v yay >/dev/null 2>&1; then
