@@ -7,7 +7,7 @@
 
 OS=''
 DE=$XDG_SESSION_DESKTOP
-TEMP_DIR=$( dirname $(pwd ${BASH_SOURCE}))/_TEMP
+TEMP_DIR=$(pwd ${BASH_SOURCE})/_TEMP
 #macOS
 if [ "$(uname)" = "Darwin" ]; then
     echo -e -n "\nRunning on macOS "
@@ -21,7 +21,7 @@ if [  "$(uname)" = "Linux" ]; then
     if [ "$(cat /etc/arch-release)" = "Arch Linux" ]; then
         echo -e "Running Arch Linux"
         OS='Arch'
-        source scripts/arch/pacman.sh
+        #source scripts/arch/pacman.sh
 
     elif [ "$(cat /etc/arch-release)" = "Manjaro Linux" ]; then
         echo -e "Running Manjaro Linux"
@@ -73,7 +73,7 @@ fi
 # Installing ZSH modules
 source scripts/common/zsh.sh
 
-source scripts/backup.sh
+source scripts/backup_rsync.sh
 source scripts/stow.sh
 
 echo "Done"
