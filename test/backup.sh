@@ -1,41 +1,44 @@
-#!/usr/bin/bash
-echo "$( dirname ${BASH_SOURCE})"
+#!/usr/bin/env bash
 DOTFILES=$HOME/.dotfiles/common
-timestamp=$(date +"%Y%m%d%H%M")
-# DOTBACK="dotfiles-$timestamp"
-# DOTLOC=$HOME/backup/
-# mkdir -vp $DOTLOC
-DOTBACK="$HOME/backup/dotfiles-$timestamp"
-mkdir -vp $DOTBACK
+DOTBACK=$HOME/backup/dotfiles
+TEMP_DIR=$( dirname $(pwd ${BASH_SOURCE}))/_TEMP
 
-files=$( find "$DOTFILES" -maxdepth 1 -mindepth 1 -type d)
-for file in ${files[@]}; do
-	dirname="$( basename $file)"
-	if [ ! $dirname = ".vscode" ]; then
-        contents=$(find -H $DOTFILES/$dirname -maxdepth 2 -mindepth 1 | sed 's/.dotfiles\/common\///')	
-        #mkdir -p $HOME/backup/${DOTBACK}/$dirname
-        mkdir -p ${DOTBACK}/$dirname
-        #contents=$(find -H $DOTFILES/$dirname -maxdepth 2 -mindepth 1)
-        	
-        for content in $contents; do 
-            target=$(echo "$content" |sed "s+${HOME}/+${DOTBACK}/+")
-            echo -e "$content\n$target\n\n"
-            if [ -d $content ]&&[ ! -e $target ]; then 
-                echo -e "\n\ncreating folder $target\n"
-                mkdir -p $target
-            fi
-            target=$( dirname $target )
-            if [ -e $content ] && [ ! "$(basename $content)" == "share" ]; then
-                echo "moving $content to $target"
-                cp -a $content $target
-            fi
-        done
-	else 
-		echo -e "\nBacking up $dirname"
-        target=${DOTBACK}
-        if [ -e $HOME/$dirname ]; then
-		   echo "Backing up $HOME/$dirname to $DOTBACK"
-           cp -a ${HOME}/$dirname $target
-        fi
-	fi
+mkdir -p $TEMP_DIR
+#echo "$(find -H "$DOTFILES" -maxdepth 1 -mindepth 1 -type f )" > $TEMP_DIR/files
+echo "parent directory is $( dirname $(pwd ${BASH_SOURCE}))"
+echo -e "\ndirectory is $(pwd ${BASH_SOURCE})"
+echo "creating backup at $DOTBACK"
+mkdir -p -v $DOTBACK
+: > $TEMP_DIR/files
+linkables=$( find -H "$DOTFILES" -maxdepth 1 -mindepth 1 -type f )
+files=$( find "$DOTFILES" -maxdepth 2 -mindepth 1 -type d)
+
+for file in ${linkables[@]}; do    
+    filename="$( basename $file )"
+    echo -e "$filename" >> $TEMP_DIR/files
 done
+
+#for file in ${files[@]}; do    
+#    filename="$( basename $file )"
+#    echo -e "$filename" >> $TEMP_DIR/files
+#done
+    #rsync -avh --dry-run --no-links --progress --stats --include-from=$TEMP_DIR/files --exclude "*." --exclude "*/" $HOME/ $HOME/backup/dotfiles 
+    #rsync -aAXv --dry-run --progress --include="$linkables" --exclude="*" $HOME $HOME/backup/dotfiles
+    
+    #rsync -aAXvh --no-links --stats --dry-run --exclude=".vscode" --exclude="Steam" --exclude=".dotfiles" --exclude=".oh-my-zsh"  --exclude=".var" --exclude=".rustup" --exclude=".mozilla" --exclude=".cache" --exclude="Trash" ~/.[^.]* $HOME/backup/test
+    
+
+    #backup command
+    rsync -aAXvh --no-links --remove-source-files --stats  --exclude=".vscode" \
+    --exclude="Steam" \
+    --exclude=".dotfiles" \
+    --exclude=".oh-my-zsh"  \
+    --exclude=".var" \
+    --exclude=".rustup" \
+    --exclude=".mozilla" \
+    --exclude=".cache" \
+    --exclude="Trash" \
+    ~/.[^.]* $HOME/backup/test
+
+    #restore
+    rsync -aAXvh --ignore-existing $HOME/backup/test/ $HOME
