@@ -1,4 +1,4 @@
-if [ -d /opt/firefox-developer ]; then 
+if [ -e /opt/firefox-developer ]; then 
     sudo rm /usr/bin/firefox-developer
     sudo rm -rf /opt/firefox-developer
     sudo rm /usr/share/applications/firefox-developer.desktop

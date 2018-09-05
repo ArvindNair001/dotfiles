@@ -5,7 +5,7 @@ if command -v dnf >/dev/null 2>&1; then
 fi
 
 if command -v apt >/dev/null 2>&1; then
-	pacman -S --noconfirm glibc libXrender libXrandr libX11 zlib
+	# pacman -S --noconfirm glibc libXrender libXrandr libX11 zlib 
 fi
 
 CACHEDIR="/var/cache/tmp/androidstudio";

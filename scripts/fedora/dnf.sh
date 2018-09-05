@@ -38,5 +38,3 @@ gnome-mpv
 #disabling COPR Repos
 sudo dnf copr -y disable user501254/Paper
 sudo dnf copr -y disable dirkdavidis/papirus-icon-theme
-
-source install/common/flatpak.sh

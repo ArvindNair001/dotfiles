@@ -8,7 +8,7 @@ sudo pacman -Sy && sudo pacman -Syu
 
 if ! command -v yay >/dev/null 2>&1; then
     git clone https://aur.archlinux.org/yay.git $TEMP_DIR && cd $TEMP_DIR/yay
-    makepkg -si --noconfirm
+    makepkg -si --noconfirm --needed
 fi
 
 if ! command -v gcc >/dev/null 2>&1; then
@@ -58,12 +58,11 @@ if [ $OS = 'Manjaro']; then
     empathy \
     mpv
 fi
-# installing aur stuff
+
 if command -v yay >/dev/null 2>&1; then
+    # installing aur stuff
     yay -S --noconfirm --needed --aur pamac-aur
     yay -S --noconfirm --needed --aur visual-studio-code-bin
 fi
-source install/common/flatpak.sh
-
 # mv /etc/pacman.d/pacman.conf ~/sysconfback
 # cp repo/pacman.conf /etc/pacman.d/pacman.conf

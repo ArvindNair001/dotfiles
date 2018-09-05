@@ -7,12 +7,13 @@
 
 OS=''
 DE=$XDG_SESSION_DESKTOP
+TEMP_DIR=$( dirname $(pwd ${BASH_SOURCE}))/_TEMP
 #macOS
 if [ "$(uname)" = "Darwin" ]; then
     echo -e -n "\nRunning on macOS "
     echo "$(sw_vers -productVersion)"
     OS='mac'
-    source install/brew.sh
+    source scripts/brew.sh
 fi
 
 #Linux condition
@@ -20,28 +21,33 @@ if [  "$(uname)" = "Linux" ]; then
     if [ "$(cat /etc/arch-release)" = "Arch Linux" ]; then
         echo -e "Running Arch Linux"
         OS='Arch'
-        source install/arch/pacman.sh
+        source scripts/arch/pacman.sh
 
     elif [ "$(cat /etc/arch-release)" = "Manjaro Linux" ]; then
         echo -e "Running Manjaro Linux"
         OS='Manjaro'
-        source intall/arch/pacman.sh 
+        source scripts/arch/pacman.sh 
 
     elif [ -f  /etc/debian_version ]; then
         echo -e "Running Debain or Debian based distro"
         OS='debian'
-        source install/debian/apt-get.sh
+        source scripts/debian/apt-get.sh
 
     elif [ -f /etc/fedora-release ]; then
         echo -e "Running Fedora"
         OS='fedora'
-        source install/fedora/dnf.sh
+        source scripts/fedora/dnf.sh
     fi
 
     if [ ! $OS = 'Arch' ]&&[ ! $OS = 'Manjaro' ]; then 
-        sudo sh ./install/common/firefox-developer-install.sh
+        sudo sh scripts/common/firefox-developer-install.sh
     fi
-    
+
+    if command -v flatpak >/dev/null 2>&1; then
+        source scripts/common/flatpak.sh
+    else
+        echo -e "Flatpak not installed, Skipping...!"
+    fi    
     # exporting zsh path to bash for chsh failsafe
     # sudo bash -c echo $(which zsh) >> /etc/shells
 fi
@@ -49,14 +55,14 @@ fi
 #installing vscode Extensions
 echo -e "Installing vscode Extensions"
 if command -v code >/dev/null 2>&1; then
-    source install/common/vscode-extensions.sh
+    source scripts/common/vscode-extensions.sh
 else 
     echo -e "vscode not installed, Skipping...!"
 fi
     
 # configuring SSH
 if [ ! -e $HOME/.ssh/id_rsa ]; then
-    source install/common/ssh.sh
+    source scripts/common/ssh.sh
 fi
 
 if ! command -v rustup >/dev/null 2>&1; then
@@ -65,10 +71,10 @@ if ! command -v rustup >/dev/null 2>&1; then
 fi
 
 # Installing ZSH modules
-source install/common/zsh.sh
+source scripts/common/zsh.sh
 
-source install/backup.sh
-source install/stow.sh
+source scripts/backup.sh
+source scripts/stow.sh
 
 echo "Done"
 env zsh

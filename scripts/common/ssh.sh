@@ -1,5 +1,5 @@
 # Configuring SSH
-location="$HOME/.ssh"
+location=$HOME/.ssh
 
 echo "Generating SSH Keys"
 mkdir  -vp $location
