@@ -1,7 +1,7 @@
 echo "Updating System"
 sudo dnf update -y
 
-source install/fedora/add-repo.sh
+source $(dirname $0)/add-repo.sh
 
 echo "Installing Softwares"
 sudo dnf install -y gnome-tweaks \
