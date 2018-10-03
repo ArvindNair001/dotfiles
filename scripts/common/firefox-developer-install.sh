@@ -1,7 +1,8 @@
-if [ -e /opt/firefox-developer ]; then 
-    sudo rm /usr/bin/firefox-developer
-    sudo rm -rf /opt/firefox-developer
-    sudo rm /usr/share/applications/firefox-developer.desktop
+#!/bin/bash
+if [ -f /usr/bin/firefox-developer ]; then 
+    rm /usr/bin/firefox-developer
+    rm -rf /opt/firefox-developer
+    rm /usr/share/applications/firefox-developer.desktop
 fi
 CACHEDIR="/var/cache/tmp/firefox-developer"
 FILE="firefox-developer.tar.bz2"
