@@ -73,7 +73,7 @@ fi
 # Installing ZSH modules
 source scripts/common/zsh.sh
 
-source scripts/backup_rsync.sh
+source scripts/backup.sh
 source scripts/stow.sh
 
 echo "Done"
