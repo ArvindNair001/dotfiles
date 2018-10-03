@@ -1,14 +1,20 @@
 # Loading Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-for file in ~/.{aliases,powerlevel9k}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-
-
 # ZSH Plugins
 plugins=(
-git,dnf,zsh-autosuggestions
+    git zsh-autosuggestions 
+	#zsh-syntax-highlighting
 )
-
 source $ZSH/oh-my-zsh.sh
+
+for file in ~/.{aliases,localrc,powerlevel9k,zprofile}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
+## Run tmux if exists
+#if command -v tmux>/dev/null; then
+#	[ -z $TMUX ] && exec tmux
+#else
+	#echo "tmux not installed."
+#fi

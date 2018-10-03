@@ -12,4 +12,6 @@
     "editor.formatOnPaste": false,
     "files.autoSave": "off",
     "vsicons.projectDetection.autoReload": true,
+    "window.titleBarStyle": "custom",
+    "liveServer.settings.donotShowInfoMsg": true,
 }
