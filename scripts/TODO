@@ -1,16 +1,22 @@
-Method to prevent adding repo if exists (in install/fedora/add-repo)
+Arch Linux now ships with empty arch-release file(/etc/issue)
+Methods to prevent adding repo if exists (in install/fedora/add-repo)
 Add support for KDE (Using $XDG_SESSION_DESKTOP)
     Use stow -d to set path and use two separate config folders for gnome && KDE XX
     use stow ignore for ignoring files irrelevant to corresponding distros
 Add support of Antergos (use awk to separate the arguments)
     Separate Arch, Manjaro and Antergos installations if possible
 Add Git config (name,username,editor,difftool(vimdiff))
+Backup & restore shell extensions
 backup & restore Dconf files (dconf dump and load)
+Optimize Flatpak Installation.
 Fix firefox-developer install script
-call flatpak from main install script
-----fix yay installation (cannot be installed through pacman)----
-Using rsync to backup (delete source then after stow using rsync to restore missing files)
-divide .zshrc into subfiles (alias,powerlevelconf,etc.)
-Simplify pacman script (remove $OS arch as --needed wont reinstall)
+Add Firefox-nightly installer script
+Restructure Entire repo
+Add delay btw pacman commands (using sleep default in secs)
 separate gnome specific apps ($XDG variable)
 cache sudo password using [read] or remove sudo from all the commands and use [sudo -u username] for regular stuff
+---done----Using rsync to backup (delete source then after stow using rsync to restore missing files)-----
+---done----divide .zshrc into subfiles (alias,powerlevelconf,etc.)----
+---done----call flatpak from main install script-----
+---done----fix yay installation (cannot be installed through pacman)----
+---done----Simplify pacman script (remove $OS arch as --needed wont reinstall)----
