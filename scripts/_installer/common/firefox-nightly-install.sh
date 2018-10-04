@@ -1,5 +1,6 @@
 #!/bin/bash
-if [ -f /usr/bin/firefox-nightly ]; then 
+if [ -f /usr/bin/firefox-nightly ]; then
+    echo "Removing ...."
     rm /usr/bin/firefox-nightly
     rm -rf /opt/firefox-nightly
     rm /usr/share/applications/firefox-nightly.desktop
@@ -22,7 +23,7 @@ ln -sf "$DIR/firefox" "/usr/bin/firefox-nightly"
 xdg-icon-resource install --novendor --size 128 "/opt/firefox-nightly/browser/chrome/icons/default/default128.png" "firefox-nightly"
 gtk-update-icon-cache -f -t /usr/share/icons/hicolor
 
-cat > /usr/local/share/applications/firefox-nightly.desktop <<EOL
+cat << EOF | tee /usr/share/applications/firefox-nightly.desktop
 [Desktop Entry]
 Name=Firefox Nightly
 GenericName=Web Browser
@@ -45,4 +46,4 @@ Exec=firefox-nightly --new-window %u
 [Desktop Action new-private-window]
 Name=New Private Window
 Exec=firefox-nightly --private-window %u
-EOL
+EOF

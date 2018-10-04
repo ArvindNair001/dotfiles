@@ -21,7 +21,7 @@ ln -sf "$DIR/firefox" "/usr/bin/firefox-developer"
 xdg-icon-resource install --novendor --size 128 "/opt/firefox-developer/browser/chrome/icons/default/default128.png" "firefox-developer-icon"
 gtk-update-icon-cache -f -t /usr/share/icons/hicolor
 
-cat > /usr/local/share/applications/firefox-developer.desktop <<EOL
+cat << EOF | tee /usr/local/share/applications/firefox-developer.desktop
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
@@ -43,4 +43,4 @@ Exec=firefox-developer %u
 [Desktop Action new-private-window]
 Name=Open a New Private Window
 Exec=firefox-developer --private-window %u
-EOL
+EOF
