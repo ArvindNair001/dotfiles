@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+# Updating Packages
+pacman -Syyu --noconfirm
+
+# updating aur packages
+# pamac upgrade --aur
+
+# updating npm packages
+sudo -u arvind npm update -g
+
+# updating pip packages
+# pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install 

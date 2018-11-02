@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e 
+
+# Removing orphans 
+pacman -R $(pacman -Qtdq) --noconfirm
+
+# Removing cache of packages not present
+pacman -Sc --noconfirm
+
+# Cleaning local cache 
+find /home/arvind/.cache -mtime +30 -delete 
+
+# Removing broken links
+find -xtype l -print -delete
+
+# Updating Core packages 
+pacman -Syu --noconfirm
+
+# Updating Aur Packages

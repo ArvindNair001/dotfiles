@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# exit for errors
+set -e
+
+#rsync -aAX --exclude-from=/var/tmp/ignorelist $HOME/ arvind@cloud:backup/ 
+
+HOME=/home/arvind
+logDir=/var/log/rsync
+[[ -d $logDir ]]|| mkdir -p $logDir
+
+echo -e "\n$(date +"%d/%m/%y %H:%M %A")\n" >> $logDir/rsync.log
+echo -e "\n$(date +"%d/%m/%y %H:%M %A")\n" >> $logDir/error.log
+
+#rsync -aAX --delete --stats --exclude-from=/var/tmp/ignorelist $HOME/ $HOME/backup/system >> $logDir/rsync.log 2>> $logDir/error.log
+
+sudo -u arvind rsync -aAX --delete --stats --exclude-from=/var/tmp/ignorelist $HOME/ arvind@cloudserver:backups/hp >> /var/log/rsync/rsync.log
+
