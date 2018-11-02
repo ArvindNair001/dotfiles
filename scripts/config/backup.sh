@@ -6,7 +6,7 @@ DOTBACK=$HOME/backup/dotfiles
 ignorearr=(
 --exclude=".vscode"
 --exclude=".cargo"
---exclude="Steam" 
+--exclude=".steam" 
 --exclude=".dotfiles" 
 --exclude=".oh-my-zsh"
 --exclude=".npm"
@@ -20,8 +20,11 @@ ignorearr=(
 --exclude=".nvidia-settings-rc"
 --exclude=".rustup"
 --exclude=".pki"
---exclude="/.nv"
+--exclude="/.nv" 
 )
 
 rsync -aAXvh --no-links --remove-source-files --stats "${ignorearr[@]}" \
-~/.[^.]* $HOME/backup/dotfiles >> $TEMP_DIR/rsync.log
+~/.[^.]* $HOME/backup/dotfiles >> $TEMP_DIR/rsync.log 2>&1
+
+# command1 >> log_file 2>&1 for same file
+# command1 >> log_file 2>> err_file for different files
