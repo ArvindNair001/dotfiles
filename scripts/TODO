@@ -1,4 +1,5 @@
-Arch Linux now ships with empty arch-release file(/etc/issue)
+Use /etc/issue for ubuntu as well
+Add cronjobs and scripts to the system automatically
 Methods to prevent adding repo if exists (in install/fedora/add-repo)
 Add support for KDE (Using $XDG_SESSION_DESKTOP)
     Use stow -d to set path and use two separate config folders for gnome && KDE XX
@@ -9,12 +10,13 @@ Add Git config (name,username,editor,difftool(vimdiff))
 Backup & restore shell extensions
 backup & restore Dconf files (dconf dump and load)
 Optimize Flatpak Installation.
-Fix firefox-developer install script
-Add Firefox-nightly installer script
 Restructure Entire repo
-Add delay btw pacman commands (using sleep default in secs)
 separate gnome specific apps ($XDG variable)
 cache sudo password using [read] or remove sudo from all the commands and use [sudo -u username] for regular stuff
+---done----Arch Linux now ships with empty arch-release file(use /etc/issue instead)------
+---done----Fix firefox-developer install script ----
+---done----Add delay btw pacman commands (using sleep default in secs) ----- 
+---done----Add Firefox-nightly installer script-----
 ---done----Using rsync to backup (delete source then after stow using rsync to restore missing files)-----
 ---done----divide .zshrc into subfiles (alias,powerlevelconf,etc.)----
 ---done----call flatpak from main install script-----
