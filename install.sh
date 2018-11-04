@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-
+set -e 
 # Author : Arvind Hariharan Nair
-
 # echo "installing Configurations"
 # source install/link.sh
 
@@ -9,6 +8,7 @@ OS=''
 DE=$XDG_SESSION_DESKTOP
 TEMP_DIR=$(pwd ${BASH_SOURCE})/_TEMP
 installer=scripts/_installer
+
 #macOS
 if [ "$(uname)" = "Darwin" ]; then
     echo -e -n "\nRunning on macOS "
@@ -19,12 +19,12 @@ fi
 
 #Linux condition
 if [  "$(uname)" = "Linux" ]; then
-    if [ "$(cat /etc/arch-release)" = "Arch Linux" ]; then
+    if [ "$(cat /etc/issue | awk '{ print $1 }')" = "Arch"  ]; then
         echo -e "Running Arch Linux"
         OS='Arch'
         source $installer/arch/pacman.sh
 
-    elif [ "$(cat /etc/arch-release)" = "Manjaro Linux" ]; then
+    elif [ "$(cat /etc/issue | awk '{ print $1 }')" = "Manjaro" ]; then
         echo -e "Running Manjaro Linux"
         OS='Manjaro'
         source $installer/arch/pacman.sh 
@@ -42,6 +42,12 @@ if [  "$(uname)" = "Linux" ]; then
 
     if [ ! $OS = 'Arch' ]&&[ ! $OS = 'Manjaro' ]; then 
         sudo sh $installer/common/firefox-developer-install.sh
+    fi
+
+    if ! command -v firefox-nightly >/dev/null 2>&1; then
+        sudo sh $installer/command/firefox-nightly.sh
+    else
+        echo -e "Firefox Nightly already installed...!"
     fi
 
     if command -v flatpak >/dev/null 2>&1; then
