@@ -5,7 +5,7 @@ set nocompatible
 set t_Co=256
 "execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
-	source ~/.vim/plugins.vim	
+source ~/.vim/plugins.vim	
 call plug#end()
 syntax on
 filetype plugin indent on
@@ -15,6 +15,8 @@ set mouse=a
 set backspace=indent,eol,start
 set hlsearch
 set incsearch
+set noshowmode " Airline already shows the mode
+
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "  =>  THEMES
@@ -64,6 +66,7 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 map <leader>t<leader> :tabnext<cr>
 
+
 "nnoremap <silent> j gj
 "nnoremap <silent> k gk
 
@@ -88,6 +91,28 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\.exe$\|\.so$'
 \ }
 
+" Airline Settings 
+"let g:airline#extensions#branch#enabled = 0
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V',
+      \ '' : 'V',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+\ } 
+
 "deoplete
 "if has('nvim')
 "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -103,7 +128,8 @@ let g:ctrlp_custom_ignore = {
 """""""""""""""""""""""""""""""""""""""""""""
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
+set ttyfast
 
 
 set history=500
