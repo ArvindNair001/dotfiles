@@ -1,5 +1,4 @@
-.uuid
-.directory
+s.directory
 machineid
 sync.lock
 common/.config/Code/Preferences
@@ -15,3 +14,4 @@ common/.config/Code/logs
 common/.config/Code/workspaceStorage/
 common/.vscode
 _TEMP
+common/.local/share/fonts/.uuid
