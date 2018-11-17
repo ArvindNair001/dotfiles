@@ -20,8 +20,8 @@ mtpfs\
 nodejs \
 npm \
 openssh \
-jdk10-openjdk \
-openjdk10-doc \
+jdk-openjdk \
+openjdk-doc \
 fzf \
 p7zip \
 unrar \
@@ -40,7 +40,6 @@ sleep 1.0
 echo "installing Common Applications"
 sudo pacman -S --noconfirm --needed calibre \
 chromium \
-firefox \
 firefox-developer-edition \
 gufw \
 libreoffice-fresh \
