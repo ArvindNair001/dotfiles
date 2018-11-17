@@ -1,0 +1,43 @@
+[profiles]
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', '3050a332-77cd-4b26-894f-7f66137920fe']
+
+[profiles/3050a332-77cd-4b26-894f-7f66137920fe]
+foreground-color='#000000000000'
+visible-name='Print'
+login-shell=true
+palette=['#000000000000', '#AA0000', '#00AA00', '#AA5400', '#0000AA', '#AA00AA', '#00AAAA', '#AAAAAA', '#2E2E34343636', '#FF5454', '#54FF54', '#FFFF54', '#5454FF', '#FF54FF', '#54FFFF', '#FFFFFF']
+badge-color-set=false
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+bold-color-set=false
+font='Monaco 14'
+background-color='#FFFFFFFFFFFF'
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#ABB2BF'
+visible-name='Default'
+login-shell=true
+palette=['#000000', '#E06C75', '#98C379', '#D19A66', '#61AEEE', '#C678DD', '#56B6C2', '#ABB2BF', '#5C6370', '#E06C75', '#98C379', '#D19A66', '#62AFEE', '#C678DD', '#56B6C2', '#FFFFFF']
+badge-color='#AC7EA8'
+badge-color-set=false
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+bold-color-set=false
+font='Hack Nerd Font 14'
+text-blink-mode='always'
+background-color='#282C34'
+background-transparency-percent=3
+dim-transparency-percent=0
+
+[/]
+prompt-on-close=true
+quake-specific-monitor=0
+sidebar-on-right=false
+prompt-on-close-process=false
+theme-variant='dark'
+enable-wide-handle=false
+prompt-on-delete-profile=false
