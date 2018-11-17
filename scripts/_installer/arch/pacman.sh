@@ -84,8 +84,22 @@ fi
 
 # KDE Specific apps
 if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
-    sudo pacman -S --noconfirm --needed \
-
+    sudo pacman -S --noconfirm --needed ark \
+    amarok \
+    dolphin \
+    dolphin-plugins \
+    gwenview \
+    kde-cli-tools
+    kinfocenter \
+    konsole \
+    kwalletmanager \
+    kipi-plugins \
+    okular \
+    plasma-pa \
+    redshift \
+    plasma5-applets-redshift-control \
+    spectacle \
+    speedcrunch \
     vlc
 fi
 
