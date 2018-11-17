@@ -1,5 +1,4 @@
 Use /etc/issue for ubuntu as well
-group installation of DE based application
 Change Backup script to archive script
 Create Backup script for backing dconf data and misc data
 Add an option to skip flatpak, vscode and other installations
@@ -16,11 +15,12 @@ Backup & restore shell extensions
 backup & restore Dconf files (dconf dump and load)
 Optimize Flatpak Installation.
 Restructure Entire repo
-separate gnome specific apps ($XDG variable)
 cache sudo password using [read] or remove sudo from all the commands and use [sudo -u username] for regular stuff
 
 
 ############################# DONE #########################################################
+----done---separate gnome specific apps ($XDG variable)
+---done----group installation of DE based application-------
 ---done----Arch Linux now ships with empty arch-release file(use /etc/issue instead)------
 ---done----Fix firefox-developer install script ----
 ---done----Add delay btw pacman commands (using sleep default in secs) ----- 
