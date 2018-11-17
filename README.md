@@ -67,7 +67,7 @@ rsync -aAX --no-links --stats ~/.[^.]* /path/of/destination
 ```
 
 ### Installation
-> Note: This repo is tailered to my needs so, it is recommended that you fork this repo and make changes to according to your needs and requirements. 
+> Note: This repo is tailered to my needs so, it is recommended that you fork this repo and make changes according to suit your needs. 
 > !! DONT RUN IT BLINDLY !!
 
 Clone the repo and run the software and voila !!
