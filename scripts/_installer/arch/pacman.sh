@@ -9,39 +9,59 @@ echo "updating packages"
 sudo pacman -Sy && sudo pacman -Syu
 sleep 1.0
 
+echo "installing libraries"
 sudo pacman -S --noconfirm --needed binutils \
-calibre \
 curl \
-chromium \
 flatpak \
-firefox \
-firefox-developer-edition \
-fzf \
-gnome-software \
-gnome-mpv \
-gufw \
 htop \
-jdk10-openjdk \
-kvantum-qt5 \
-libreoffice-fresh \
+libmtp \
+mtpfs\
 nodejs \
 npm \
-openjdk10-doc \
 openssh \
-python-nautilus \
+jdk10-openjdk \
+openjdk10-doc \
+fzf \
 p7zip \
-rsync \
 unrar \
-steam \
-steam-native-runtime \
-gvim \
+rsync \
 stow \
 tlp \
 tlp-rdw \
+gvim \
 tmux \
-tilix \
 wget \
 zsh 
+
+sleep 1.0
+
+echo "installing Common Applications"
+sudo pacman -S --noconfirm --needed calibre \
+chromium \
+firefox \
+firefox-developer-edition \
+gufw \
+libreoffice-fresh \
+steam \
+steam-native-runtime 
+
+sleep 1.0
+
+# Gnome specific packages
+if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
+    sudo pacman -S --noconfirm --needed gnome-software \
+    gnome-mpv \
+    kvantum-qt5 \
+    python-nautilus \
+    tilix
+fi
+
+# KDE Specific apps
+if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
+    sudo pacman -S --noconfirm --needed \
+
+    vlc
+fi
 
 if ! command -v gcc >/dev/null 2>&1; then
     sudo pacman -S --noconfirm --needed gcc
@@ -66,9 +86,14 @@ if ! command -v yay >/dev/null 2>&1; then
 fi
 
 if command -v yay >/dev/null 2>&1; then
-    # installing aur stuff
-    yay -S --noconfirm --needed --aur pamac-aur
-    sleep 1.0
+    # installing aur stuff 
+    # if desktop is kde
+    if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
+        yay -S --noconfirm --needed --aur pamac-aur pamac-tray-appindicator
+    else 
+        yay -S --noconfirm --needed --aur pamac-aur
+    fi
+
     yay -S --noconfirm --needed --aur visual-studio-code-bin
 fi
 # mv /etc/pacman.d/pacman.conf ~/sysconfback
