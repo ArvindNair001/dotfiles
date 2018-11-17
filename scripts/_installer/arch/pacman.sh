@@ -13,6 +13,7 @@ echo "installing libraries"
 sudo pacman -S --noconfirm --needed binutils \
 curl \
 flatpak \
+gcc \
 htop \
 libmtp \
 mtpfs\
@@ -25,6 +26,7 @@ fzf \
 p7zip \
 unrar \
 rsync \
+ruby \
 stow \
 tlp \
 tlp-rdw \
@@ -61,14 +63,6 @@ if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
     sudo pacman -S --noconfirm --needed \
 
     vlc
-fi
-
-if ! command -v gcc >/dev/null 2>&1; then
-    sudo pacman -S --noconfirm --needed gcc
-fi
-
-if ! command -v ruby >/dev/null 2>&1; then
-    sudo pacman -S --noconfirm --needed ruby
 fi
 
 if [ $OS = 'Manjaro' ]; then
