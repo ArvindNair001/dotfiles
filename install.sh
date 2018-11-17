@@ -45,16 +45,16 @@ if [  "$(uname)" = "Linux" ]; then
     fi
 
     if ! command -v firefox-nightly >/dev/null 2>&1; then
-        sudo sh $installer/command/firefox-nightly.sh
+        sudo sh $installer/common/firefox-nightly-install.sh
     else
         echo -e "Firefox Nightly already installed...!"
     fi
 
-    if command -v flatpak >/dev/null 2>&1; then
-        source $installer/common/flatpak.sh
-    else
-        echo -e "Flatpak not installed, Skipping...!"
-    fi    
+    #if command -v flatpak >/dev/null 2>&1; then
+     #   source $installer/common/flatpak.sh
+    #else
+     #   echo -e "Flatpak not installed, Skipping...!"
+   # fi    
     # exporting zsh path to bash for chsh failsafe
     # sudo bash -c echo $(which zsh) >> /etc/shells
 fi
@@ -79,8 +79,9 @@ fi
 
 # Installing ZSH modules
 source scripts/config/zsh.sh
-
+sleep 1.0
 source scripts/config/backup.sh
+sleep 1.0
 source scripts/config/stow.sh
 
 echo "Done"
