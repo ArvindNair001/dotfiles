@@ -19,6 +19,7 @@ libmtp \
 mtpfs\
 nodejs \
 npm \
+networkmanager-openvpn \
 openssh \
 jdk-openjdk \
 openjdk-doc \
@@ -32,19 +33,42 @@ tlp \
 tlp-rdw \
 gvim \
 tmux \
+ufw \
 wget \
 zsh 
 
 sleep 1.0
 
+echo -e "installing extras"
+sudo pacman -S adobe-source-sans-pro-fonts \
+aspell-en \
+enchant \
+gst-libav \
+gst-plugins-good \
+jre8-openjdk \
+hunspell-en \
+icedtea-web \
+languagetool \
+libmythes \
+mythes-en \
+pkgstats \
+ttf-anonymous-pro \
+ttf-bitstream-vera \
+ttf-dejavu \
+ttf-droid \
+ttf-gentium \
+ttf-liberation \
+ttf-ubuntu-font-family
+
 echo "installing Common Applications"
 sudo pacman -S --noconfirm --needed calibre \
 chromium \
 firefox-developer-edition \
-gufw \
+gimp \
 libreoffice-fresh \
 steam \
 steam-native-runtime 
+qbittorent \
 
 sleep 1.0
 
@@ -52,6 +76,7 @@ sleep 1.0
 if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
     sudo pacman -S --noconfirm --needed gnome-software \
     gnome-mpv \
+    gnome-tweaks\
     kvantum-qt5 \
     python-nautilus \
     tilix
