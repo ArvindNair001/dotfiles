@@ -284,6 +284,12 @@ Dump
 .gnupg/*.lock
 .gnupg/gpg-agent-info-*
 
+#PKI
+/.pki
+
+#lastpass
+/.lastpass
+
 #Google Earth:
 .googleearth/Temp
 .googleearth/Cache
