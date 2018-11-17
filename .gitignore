@@ -15,4 +15,6 @@ common/.config/Code/workspaceStorage/
 common/.vscode
 _TEMP
 common/.local/share/fonts/.uuid
+common/.vim/autoload/plug.vim
+common/.vim/plugged
 scripts/temp
