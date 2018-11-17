@@ -34,7 +34,7 @@ rsync \
 unrar \
 steam \
 steam-native-runtime \
-vim \
+gvim \
 stow \
 tlp \
 tlp-rdw \
