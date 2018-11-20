@@ -10,12 +10,16 @@ sudo pacman -Sy && sudo pacman -Syu
 sleep 1.0
 
 echo "installing libraries"
-sudo pacman -S --noconfirm --needed binutils \
+sudo pacman -S --noconfirm --needed \ 
+android-tools \
+android-udev \
+binutils \
 cups \
 curl \
 flatpak \
 fzf \
 gcc \
+gvfs-mtp \
 gvim \
 htop \
 jdk-openjdk \
@@ -43,7 +47,8 @@ zsh
 sleep 1.0
 
 echo -e "installing extras"
-sudo pacman -S --noconfirm --needed adobe-source-sans-pro-fonts \
+sudo pacman -S --noconfirm --needed \
+adobe-source-sans-pro-fonts \
 aspell-en \
 enchant \
 gst-libav \
@@ -64,7 +69,8 @@ ttf-liberation \
 ttf-ubuntu-font-family
 
 echo "installing Common Applications"
-sudo pacman -S --noconfirm --needed calibre \
+sudo pacman -S --noconfirm --needed \
+calibre \
 chromium \
 firefox-developer-edition \
 gimp \
@@ -78,7 +84,8 @@ sleep 1.0
 # Gnome specific packages
 if [ $XDG_SESSION_DESKTOP = 'gnome' ]; then
     echo "installing Gnome packages"
-    sudo pacman -S --noconfirm --needed gnome-software \
+    sudo pacman -S --noconfirm --needed \
+    gnome-software \
     gnome-mpv \
     gnome-tweaks\
     kvantum-qt5 \
@@ -89,7 +96,8 @@ fi
 # KDE Specific apps
 if [ $XDG_SESSION_DESKTOP = 'KDE' ]; then
     echo "installing KDE packages"
-    sudo pacman -S --noconfirm --needed ark \
+    sudo pacman -S --noconfirm --needed \
+    ark \
     dolphin \
     dolphin-plugins \
     gwenview \
@@ -108,14 +116,16 @@ if [ $XDG_SESSION_DESKTOP = 'KDE' ]; then
 
     sleep 1.5
 
-    pacman -Rns kbackup \
+    pacman -Rns \
+    kbackup \
     kfloppy \
     ktimer 
 fi
 
 if [ $OS = 'Manjaro' ]; then
     # remove unnecessary packages
-    sudo pacman -Rns ms-office-online \
+    sudo pacman -Rns \
+    ms-office-online \
     imagewrtier \
     empathy \
     mpv
