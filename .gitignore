@@ -1,4 +1,4 @@
-s.directory
+.directory
 machineid
 sync.lock
 common/.config/Code/Preferences
@@ -17,4 +17,5 @@ _TEMP
 common/.local/share/fonts/.uuid
 common/.vim/autoload/plug.vim
 common/.vim/plugged
+common/.vim/.netrwhist
 scripts/temp
