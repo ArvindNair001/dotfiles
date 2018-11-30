@@ -7,7 +7,7 @@ set -e
 OS=''
 DE=$XDG_SESSION_DESKTOP
 TEMP_DIR=$(pwd ${BASH_SOURCE})/_TEMP
-installer=scripts/_installer
+installer=$(pwd ${BASH_SOURCE})/scripts/_installer
 
 #macOS
 if [ "$(uname)" = "Darwin" ]; then
