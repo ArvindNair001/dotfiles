@@ -1,25 +1,36 @@
+######################## ISSUES ############################################################
+inconsist behaviour across different platform
+Rsync works different in mac
+Brew causes issues on script rerun
+
+###################### TODO #########################################################
 Use /etc/issue for ubuntu as well
-Change Backup script to archive script
-Create Backup script for backing dconf data and misc data
+rename scripts to bin
+Alternative to Bash
+organize ignorelist
+use `mktemp -d` for creating temporary dir
+rename Backup script 
+Create Backup script for backing dconf and misc data
 Add an option to skip flatpak, vscode and other installations
-Prevent Flatpak errors to exit out of script
+Prevent Flatpak from exiting out of script
 Add cronjobs and scripts to the system automatically
 Methods to prevent adding repo if exists (in install/fedora/add-repo)
+Add Git config (name,username,editor,difftool(vimdiff))
 Add support for KDE (Using $XDG_SESSION_DESKTOP)
     Use stow -d to set path and use two separate config folders for gnome && KDE XX
     use stow ignore for ignoring files irrelevant to corresponding distros
 Add support of Antergos (use awk to separate the arguments)
     Separate Arch, Manjaro and Antergos installations if possible
-Add Git config (name,username,editor,difftool(vimdiff))
 Backup & restore shell extensions
 backup & restore Dconf files (dconf dump and load)
 Optimize Flatpak Installation.
+Upate the ignorelist for macOS dotfiles
 Restructure Entire repo
 cache sudo password using [read] or remove sudo from all the commands and use [sudo -u username] for regular stuff
 
 
 ############################# DONE #########################################################
-----done---separate gnome specific apps ($XDG variable)
+---done----separate gnome specific apps ($XDG variable)
 ---done----group installation of DE based application-------
 ---done----Arch Linux now ships with empty arch-release file(use /etc/issue instead)------
 ---done----Fix firefox-developer install script ----

@@ -44,7 +44,6 @@
 /VirtualBox*
 
 ## Add Game Folders here:
-#
 /games
 /Games
 .local/share/Steam
@@ -94,7 +93,6 @@ Steam
 /.dotfiles
 /.profile
 /.*rc
-/.rustup
 .powerlevel9k
 .ssh
 .tmux*
@@ -108,6 +106,10 @@ Steam
 .zhistory
 .zcompdump*
 /Templates
+
+# Rust files
+/.cargo
+/.rustup
 
 # Cached info about audio CDs:
 .cddb

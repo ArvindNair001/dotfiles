@@ -1,3 +1,0 @@
-sourcing file from github dotfiles (so that system specific configuration is separate)
-setuping submodules
-use gnu make for installing instead of install script
