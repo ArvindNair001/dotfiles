@@ -1,4 +1,5 @@
 " deoplete.nvim for autocompletion
+" Vim Pluggins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'liuchengxu/space-vim-dark'
@@ -12,10 +13,9 @@ if has('nvim')
   Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 else
   Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf.vim'
 endif
-"let g:deoplete#enable_at_startup = 1
 

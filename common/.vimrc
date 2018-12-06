@@ -1,9 +1,15 @@
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+"   \_/ |_|_| |_| |_|_|  \___|
+
+
 """"""""""""""""""""""""""""""""""""""""""""""
 "  => General
 """"""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set t_Co=256
-"execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 source ~/.vim/plugins.vim	
 call plug#end()
@@ -30,6 +36,7 @@ let g:airline_theme='onedark'
 "let g:airline_theme='kolor'
 
 colorscheme space-vim-dark
+"hi Normal guibg=NONE ctermbg=NONE
 "colorscheme onedark
 set termguicolors
 hi LineNr ctermbg=NONE guibg=NONE
@@ -37,6 +44,7 @@ hi LineNr ctermbg=NONE guibg=NONE
 """"""""""""""""""""""""""""""""""""""""""""""
 " => Keymaps and custom commands
 """"""""""""""""""""""""""""""""""""""""""""""
+
 " Set leader key
 let mapleader = ","
 
@@ -123,11 +131,14 @@ let g:ctrlp_custom_ignore = {
 "endif
 "let g:deoplete#enable_at_startup = 1
 
+if has('python3')
+	set pyxversion=3
+endif
 """""""""""""""""""""""""""""""""""""""""""""
 " => 
 """""""""""""""""""""""""""""""""""""""""""""
 
-" Don't redraw while executing macros (good performance config)
+"Don't redraw while executing macros (good performance config)
 set lazyredraw
 set ttyfast
 
