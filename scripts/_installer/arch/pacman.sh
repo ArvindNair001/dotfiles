@@ -55,6 +55,10 @@ gst-libav \
 gst-plugins-good \
 jre8-openjdk \
 hunspell \
+hunspell-en_US \
+hunspell-en_GB \
+hypen \
+hypen-en \
 icedtea-web \
 languagetool \
 libmythes \
