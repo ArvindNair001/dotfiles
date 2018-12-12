@@ -15,7 +15,7 @@ DIR="/opt/firefox-developer"
 tar jxf "$CACHEDIR/$FILE" -C "/opt"
 mv "/opt/firefox" $DIR
 
-[[ -n $USER ]] && chown -R $USER $DIR
+[[ -n $CURRENT_USER ]] && chown -R $CURRENT_USER $DIR
 ln -sf "$DIR/firefox" "/usr/bin/firefox-developer"
 
 xdg-icon-resource install --novendor --size 128 "/opt/firefox-developer/browser/chrome/icons/default/default128.png" "firefox-developer-icon"

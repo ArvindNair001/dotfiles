@@ -18,7 +18,7 @@ mv "/opt/firefox" $DIR
 sleep 1.0
 
 #user=$(logname)
-[[ -n $USER ]] && chown -R $USER:users $DIR
+[[ -n $CURRENT_USER ]] && chown -R $CURRENT_USER $DIR
 ln -sf "$DIR/firefox" "/usr/bin/firefox-nightly"
 
 xdg-icon-resource install --novendor --size 128 "/opt/firefox-nightly/browser/chrome/icons/default/default128.png" "firefox-nightly"

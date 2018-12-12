@@ -6,8 +6,10 @@ set -e
 
 OS=''
 DE=$XDG_SESSION_DESKTOP
-TEMP_DIR=$(pwd ${BASH_SOURCE})/_TEMP
+TEMP_DIR=`mktemp -d`
 installer=$(pwd ${BASH_SOURCE})/scripts/_installer
+CURRENT_USER=`whoami`
+#TEMP_DIR=$(pwd ${BASH_SOURCE})/_TEMP
 
 #macOS
 if [ "$(uname)" = "Darwin" ]; then
