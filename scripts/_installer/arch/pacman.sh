@@ -79,6 +79,7 @@ chromium \
 firefox-developer-edition \
 gimp \
 libreoffice-fresh \
+nextcloud-client \
 steam \
 steam-native-runtime \
 qbittorrent \
