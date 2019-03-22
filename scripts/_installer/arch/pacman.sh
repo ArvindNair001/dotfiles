@@ -63,6 +63,7 @@ icedtea-web \
 languagetool \
 libmythes \
 mythes-en \
+noto-fonts-emoji \
 pkgstats \
 ttf-anonymous-pro \
 ttf-bitstream-vera \
