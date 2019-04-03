@@ -77,6 +77,7 @@ echo "installing Common Applications"
 sudo pacman -S --noconfirm --needed \
 calibre \
 chromium \
+code \
 firefox-developer-edition \
 gimp \
 libreoffice-fresh \
@@ -145,13 +146,13 @@ fi
 
 if command -v yay >/dev/null 2>&1; then
     # installing aur stuff 
-    if [ $XDG_SESSION_DESKTOP == 'KDE' ]; then
+    if [ $XDG_SESSION_DESKTOP = 'KDE' ]; then
         yay -S --noconfirm --needed --aur pamac-aur pamac-tray-appindicator
     else 
         yay -S --noconfirm --needed --aur pamac-aur
     fi
 
-    yay -S --noconfirm --needed --aur visual-studio-code-bin
+    # yay -S --noconfirm --needed --aur visual-studio-code-bin
 fi
 # mv /etc/pacman.d/pacman.conf ~/sysconfback
 # cp repo/pacman.conf /etc/pacman.d/pacman.conf
