@@ -3,9 +3,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # ZSH Plugins
 plugins=(
-    git zsh-autosuggestions 
-	#zsh-syntax-highlighting
+    git
+	colored-man-pages
+   	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
+
 source $ZSH/oh-my-zsh.sh
 
 for file in ~/.{aliases,localrc,powerlevel9k,zprofile}; do
