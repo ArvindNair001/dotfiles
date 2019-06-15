@@ -3,20 +3,19 @@ inconsistent behaviour across different platform (Use Python for mission critica
 Rsync works different in mac
 Brew causes issues on script re-run
 Visual studio profiles for OSS branch (link default to OSS during stow)
-Packages are fragmented for different distros (find solution for unifying package management)
+Packages are fragmented across different distros (find solution for unifying package management)
 
 ###################### TODO #########################################################
+Move the installer to a separate repo
+Backup GPG keys.
 Separate Packages based on DE's and source them synchronously
 vscode extensions backup and installation (use "code --list-extensions" and use loop  "--install-extension <extension-name>")
-change vscode installation from aur to pacman
 Installer script for etcher
-remove annoying beep
-Change cron job scripts (switched to user anacron)
+remove annoying beep (Remove pcspkr module from kernel)
 Use /etc/issue for ubuntu as well
 rename scripts to bin
-Alternative to Bash
+Alternative to Bash (python scripts)
 organize ignorelist
-use `mktemp -d` for creating temporary dir
 rename Backup script 
 Create Backup script for backing dconf and misc data
 Add an option to skip flatpak, vscode and other installations
@@ -38,6 +37,9 @@ cache sudo password using [read] or remove sudo from all the commands and use [s
 
 
 ############################## DONE #########################################################
+---done----Change cron job scripts (switch to user anacron)-----
+---done----change vscode installation from aur to pacman-----
+---done----use `mktemp -d` for creating temporary dir------
 ---done----separate gnome specific apps ($XDG variable)
 ---done----group installation of DE based application-------
 ---done----Arch Linux now ships with empty arch-release file(use /etc/issue instead)------
